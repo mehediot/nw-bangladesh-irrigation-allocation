@@ -1,0 +1,9 @@
+variable,compared_with,rows,max_abs_gap,mean_abs_gap,tolerance,within_tolerance
+season_rain_mm,analysis_panel_full.csv,528,1.240000000000009,0.1140719696969699,1.5,True
+monsoon_prev_rain_mm,analysis_panel_full.csv,528,0.0500000000001819,0.024829545454551294,0.1,True
+season_tmean_c,analysis_panel_full.csv,528,0.005000000000002558,0.002430871212121421,0.006,True
+season_tmax_c,analysis_panel_full.csv,528,0.005000000000002558,0.002394570707070976,0.006,True
+season_tmin_c,analysis_panel_full.csv,528,0.005000000000002558,0.0026205808080808483,0.006,True
+terminal_tmax_c,analysis_panel_full.csv,528,0.0,0.0,1e-09,True
+season_rh_pct,analysis_panel_full.csv,528,0.005000000000009663,0.0023664772727280217,0.006,True
+effective_rain_mm,nasa_pm_seasonal_cache,528,0.4183353600000075,0.13874487818181838,0.5,True

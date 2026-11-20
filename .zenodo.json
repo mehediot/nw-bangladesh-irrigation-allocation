@@ -1,0 +1,27 @@
+{
+  "title": "Code and data for: An Explainable Machine Learning and Optimization Framework for Irrigation-Constrained Multi-Crop Decision Support in Northwest Bangladesh",
+  "upload_type": "software",
+  "description": "Code, input data and reference outputs of a district-level analysis of irrigation-constrained crop allocation in the 16 districts of northwest Bangladesh: a linear allocation model with explicit fallow and a floor on the Boro rice area, decision-time yield forecasts and their decision value, a Gamma-robust water constraint, FAO-56 crop water requirements, a relative water scarcity index, alternate wetting and drying, a six-crop variant with lentil and mustard, and the model value of water. One command reproduces all 91 output tables exactly and writes the 14 figures of the paper; a notebook runs the analysis step by step.",
+  "creators": [
+    {
+      "name": "Khan, Md. Mehedi Zaman"
+    },
+    {
+      "name": "Ahmed, Md. Toukir"
+    },
+    {
+      "name": "Ashiqussalehin, Md."
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "groundwater irrigation",
+    "crop allocation",
+    "Boro rice",
+    "alternate wetting and drying",
+    "yield forecasting",
+    "robust optimisation",
+    "Bangladesh"
+  ],
+  "version": "1.0.1"
+}

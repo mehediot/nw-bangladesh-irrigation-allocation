@@ -1,0 +1,8 @@
+# written by every run
+generated/
+verification/
+
+# Python and Jupyter
+__pycache__/
+.ipynb_checkpoints/
+.venv/

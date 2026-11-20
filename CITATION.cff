@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite it as below."
+title: "Code and data for: An Explainable Machine Learning and Optimization Framework for Irrigation-Constrained Multi-Crop Decision Support in Northwest Bangladesh"
+type: software
+version: "1.0.1"
+license: MIT
+repository-code: "https://github.com/mehediot/nw-bangladesh-irrigation-allocation"
+authors:
+  - family-names: Khan
+    given-names: "Md. Mehedi Zaman"
+  - family-names: Ahmed
+    given-names: "Md. Toukir"
+  - family-names: Ashiqussalehin
+    given-names: "Md."
+keywords:
+  - groundwater irrigation
+  - crop allocation
+  - Boro rice
+  - alternate wetting and drying
+  - yield forecasting
+  - robust optimisation
+  - Bangladesh

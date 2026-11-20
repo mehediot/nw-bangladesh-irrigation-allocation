@@ -1,0 +1,18 @@
+crop,term,FE_coefficient
+Boro Rice,season_rain_mm,0.00023952782904114933
+Boro Rice,monsoon_prev_rain_mm,-0.00025312654094169655
+Boro Rice,terminal_tmax_c,-0.003028817095341203
+Boro Rice,season_tmin_c,-0.00644703965024336
+Boro Rice,season_rh_pct,-0.005108582188666704
+Boro Rice,hybrid_area_share,0.7111128477380949
+Wheat,season_rain_mm,-0.000943553223516348
+Wheat,monsoon_prev_rain_mm,0.0001608507459473702
+Wheat,terminal_tmax_c,-0.029315270037284912
+Wheat,season_tmin_c,-0.07049926896184648
+Wheat,season_rh_pct,-0.0017452059910789412
+Potato,season_rain_mm,-0.0022589703949686384
+Potato,monsoon_prev_rain_mm,0.00056956533001169
+Potato,terminal_tmax_c,-0.1629174401995191
+Potato,season_tmin_c,0.7727139945128757
+Potato,season_rh_pct,-0.019453167756397372
+Potato,hyv_area_share,8.673903410989308

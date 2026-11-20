@@ -1,0 +1,193 @@
+district,crop,state,joint_obs_exact,nearest_standardized_distance
+Bogura,Boro Rice,baseline,False,0.9684464412053543
+Bogura,Boro Rice,dry,False,0.37866300722286195
+Bogura,Boro Rice,hot,False,0.9779552910208913
+Bogura,Boro Rice,dryhot,False,0.23122164659532835
+Bogura,Potato,baseline,False,1.1289608238948967
+Bogura,Potato,dry,False,0.7901485871548508
+Bogura,Potato,hot,False,1.4198478410470654
+Bogura,Potato,dryhot,False,0.7295321915498751
+Bogura,Wheat,baseline,False,1.0684488953060973
+Bogura,Wheat,dry,False,1.2886865623094033
+Bogura,Wheat,hot,False,1.7863421640741615
+Bogura,Wheat,dryhot,False,1.7465791460062468
+Chapainawabganj,Boro Rice,baseline,False,1.1102204889118283
+Chapainawabganj,Boro Rice,dry,False,1.3217639405014958
+Chapainawabganj,Boro Rice,hot,False,0.8522911458301737
+Chapainawabganj,Boro Rice,dryhot,False,0.8741621069633024
+Chapainawabganj,Potato,baseline,False,1.3478156249335442
+Chapainawabganj,Potato,dry,False,1.0320273529781876
+Chapainawabganj,Potato,hot,False,0.9989290067258325
+Chapainawabganj,Potato,dryhot,False,0.27716916558529137
+Chapainawabganj,Wheat,baseline,False,1.5987091166491374
+Chapainawabganj,Wheat,dry,False,1.6551908360707184
+Chapainawabganj,Wheat,hot,False,1.482576539132904
+Chapainawabganj,Wheat,dryhot,False,1.8435983440463621
+Dinajpur,Boro Rice,baseline,False,1.0414285932201786
+Dinajpur,Boro Rice,dry,False,0.5269302365040719
+Dinajpur,Boro Rice,hot,False,1.0325708005406484
+Dinajpur,Boro Rice,dryhot,False,0.45296624212305747
+Dinajpur,Potato,baseline,False,0.6515086412308914
+Dinajpur,Potato,dry,False,1.0562831032084052
+Dinajpur,Potato,hot,False,1.1620855861830646
+Dinajpur,Potato,dryhot,False,0.8246962107033323
+Dinajpur,Wheat,baseline,False,0.9183505074319672
+Dinajpur,Wheat,dry,False,0.9222648169718325
+Dinajpur,Wheat,hot,False,1.3787333148065304
+Dinajpur,Wheat,dryhot,False,1.6246954133013178
+Gaibandha,Boro Rice,baseline,False,1.1882722548034725
+Gaibandha,Boro Rice,dry,False,0.6794788807502355
+Gaibandha,Boro Rice,hot,False,1.080189701365185
+Gaibandha,Boro Rice,dryhot,False,0.4645980660670277
+Gaibandha,Potato,baseline,False,0.7630250936595675
+Gaibandha,Potato,dry,False,0.9800244804701318
+Gaibandha,Potato,hot,False,1.0564465740832336
+Gaibandha,Potato,dryhot,False,0.7202912082488483
+Gaibandha,Wheat,baseline,False,0.9031012384735173
+Gaibandha,Wheat,dry,False,1.2123999413544797
+Gaibandha,Wheat,hot,False,1.6522140940387768
+Gaibandha,Wheat,dryhot,False,1.8325905027339369
+Joypurhat,Boro Rice,baseline,False,0.9217830669588792
+Joypurhat,Boro Rice,dry,False,0.7809250884697899
+Joypurhat,Boro Rice,hot,False,1.1939422570193583
+Joypurhat,Boro Rice,dryhot,False,0.15961530095039989
+Joypurhat,Potato,baseline,False,1.0916528908219914
+Joypurhat,Potato,dry,False,0.9706629693953913
+Joypurhat,Potato,hot,False,1.4414071232146628
+Joypurhat,Potato,dryhot,False,0.1865686326653032
+Joypurhat,Wheat,baseline,False,1.12255845502681
+Joypurhat,Wheat,dry,False,1.2228048642452194
+Joypurhat,Wheat,hot,False,1.5139401407776776
+Joypurhat,Wheat,dryhot,False,1.4402148093553002
+Kurigram,Boro Rice,baseline,False,1.071158381063308
+Kurigram,Boro Rice,dry,False,0.5335796198062133
+Kurigram,Boro Rice,hot,False,1.2185920659446976
+Kurigram,Boro Rice,dryhot,False,0.900051998396948
+Kurigram,Potato,baseline,False,0.6194279554085809
+Kurigram,Potato,dry,False,1.1552772237399667
+Kurigram,Potato,hot,False,0.9840293252855268
+Kurigram,Potato,dryhot,False,0.7535580551466747
+Kurigram,Wheat,baseline,False,0.7053914819773215
+Kurigram,Wheat,dry,False,1.353694285291897
+Kurigram,Wheat,hot,False,1.6406536981613713
+Kurigram,Wheat,dryhot,False,1.8200525186850347
+Lalmonirhat,Boro Rice,baseline,False,1.071158381063308
+Lalmonirhat,Boro Rice,dry,False,0.5335796198062133
+Lalmonirhat,Boro Rice,hot,False,1.2185920659446976
+Lalmonirhat,Boro Rice,dryhot,False,0.900051998396948
+Lalmonirhat,Potato,baseline,False,0.6194279554085809
+Lalmonirhat,Potato,dry,False,1.1552772237399667
+Lalmonirhat,Potato,hot,False,0.9840293252855268
+Lalmonirhat,Potato,dryhot,False,0.7535580551466747
+Lalmonirhat,Wheat,baseline,False,0.7053914819773215
+Lalmonirhat,Wheat,dry,False,1.353694285291897
+Lalmonirhat,Wheat,hot,False,1.6406536981613713
+Lalmonirhat,Wheat,dryhot,False,1.8200525186850347
+Naogaon,Boro Rice,baseline,False,0.9217830669588792
+Naogaon,Boro Rice,dry,False,0.7809250884697899
+Naogaon,Boro Rice,hot,False,1.1939422570193583
+Naogaon,Boro Rice,dryhot,False,0.15961530095039989
+Naogaon,Potato,baseline,False,1.0916528908219914
+Naogaon,Potato,dry,False,0.9706629693953913
+Naogaon,Potato,hot,False,1.4414071232146628
+Naogaon,Potato,dryhot,False,0.1865686326653032
+Naogaon,Wheat,baseline,False,1.12255845502681
+Naogaon,Wheat,dry,False,1.2228048642452194
+Naogaon,Wheat,hot,False,1.5139401407776776
+Naogaon,Wheat,dryhot,False,1.4402148093553002
+Natore,Boro Rice,baseline,False,0.9117534128340822
+Natore,Boro Rice,dry,False,0.7879301836796784
+Natore,Boro Rice,hot,False,1.3126788097082949
+Natore,Boro Rice,dryhot,False,0.2063179981228197
+Natore,Potato,baseline,False,1.3776563020207415
+Natore,Potato,dry,False,0.9213697963565399
+Natore,Potato,hot,False,1.2885004724659093
+Natore,Potato,dryhot,False,0.05671680367070003
+Natore,Wheat,baseline,False,1.3251701163900758
+Natore,Wheat,dry,False,1.130287023290373
+Natore,Wheat,hot,False,1.4783268545256951
+Natore,Wheat,dryhot,False,1.5237333737309764
+Nilphamari,Boro Rice,baseline,False,0.9496151315358698
+Nilphamari,Boro Rice,dry,False,0.8576754262889438
+Nilphamari,Boro Rice,hot,False,1.2775838321379407
+Nilphamari,Boro Rice,dryhot,False,0.908124699663517
+Nilphamari,Potato,baseline,False,0.5703887614048301
+Nilphamari,Potato,dry,False,1.2771955595508826
+Nilphamari,Potato,hot,False,0.6004974307709555
+Nilphamari,Potato,dryhot,False,0.7682333852251895
+Nilphamari,Wheat,baseline,False,0.3762531310234229
+Nilphamari,Wheat,dry,False,1.26996602886696
+Nilphamari,Wheat,hot,False,1.11097452049109
+Nilphamari,Wheat,dryhot,False,1.6213160895429848
+Pabna,Boro Rice,baseline,False,1.084855649609186
+Pabna,Boro Rice,dry,False,0.9499772931287906
+Pabna,Boro Rice,hot,False,1.1073854489075559
+Pabna,Boro Rice,dryhot,False,1.053813946796715
+Pabna,Potato,baseline,False,1.1350018053041866
+Pabna,Potato,dry,False,0.7170115104364373
+Pabna,Potato,hot,False,1.007866111447039
+Pabna,Potato,dryhot,False,0.32672157980577987
+Pabna,Wheat,baseline,False,0.8668548848156254
+Pabna,Wheat,dry,False,1.354284992250535
+Pabna,Wheat,hot,False,1.4786373535028214
+Pabna,Wheat,dryhot,False,1.9420048393634715
+Panchagarh,Boro Rice,baseline,False,0.8503084510937433
+Panchagarh,Boro Rice,dry,False,0.932859164746437
+Panchagarh,Boro Rice,hot,False,1.4456613977602977
+Panchagarh,Boro Rice,dryhot,False,0.533819192688011
+Panchagarh,Potato,baseline,False,0.3384859849057749
+Panchagarh,Potato,dry,False,1.2573106411187815
+Panchagarh,Potato,hot,False,1.8041440940943363
+Panchagarh,Potato,dryhot,False,0.2482736466238952
+Panchagarh,Wheat,baseline,False,0.7108639019926577
+Panchagarh,Wheat,dry,False,0.8728240977978617
+Panchagarh,Wheat,hot,False,1.7041697051937044
+Panchagarh,Wheat,dryhot,False,0.5556530110283867
+Rajshahi,Boro Rice,baseline,False,0.9117534128340822
+Rajshahi,Boro Rice,dry,False,0.7879301836796784
+Rajshahi,Boro Rice,hot,False,1.3126788097082949
+Rajshahi,Boro Rice,dryhot,False,0.2063179981228197
+Rajshahi,Potato,baseline,False,1.3776563020207415
+Rajshahi,Potato,dry,False,0.9213697963565399
+Rajshahi,Potato,hot,False,1.2885004724659093
+Rajshahi,Potato,dryhot,False,0.05671680367070003
+Rajshahi,Wheat,baseline,False,1.3251701163900758
+Rajshahi,Wheat,dry,False,1.130287023290373
+Rajshahi,Wheat,hot,False,1.4783268545256951
+Rajshahi,Wheat,dryhot,False,1.5237333737309764
+Rangpur,Boro Rice,baseline,False,1.071158381063308
+Rangpur,Boro Rice,dry,False,0.5335796198062133
+Rangpur,Boro Rice,hot,False,1.2185920659446976
+Rangpur,Boro Rice,dryhot,False,0.900051998396948
+Rangpur,Potato,baseline,False,0.6194279554085809
+Rangpur,Potato,dry,False,1.1552772237399667
+Rangpur,Potato,hot,False,0.9840293252855268
+Rangpur,Potato,dryhot,False,0.7535580551466747
+Rangpur,Wheat,baseline,False,0.7053914819773215
+Rangpur,Wheat,dry,False,1.353694285291897
+Rangpur,Wheat,hot,False,1.6406536981613713
+Rangpur,Wheat,dryhot,False,1.8200525186850347
+Sirajganj,Boro Rice,baseline,False,0.9157523239358332
+Sirajganj,Boro Rice,dry,False,0.6083300457357097
+Sirajganj,Boro Rice,hot,False,0.8539561603428981
+Sirajganj,Boro Rice,dryhot,False,0.7652237008566919
+Sirajganj,Potato,baseline,False,1.2800324441000719
+Sirajganj,Potato,dry,False,0.771235093796814
+Sirajganj,Potato,hot,False,0.9886224525504991
+Sirajganj,Potato,dryhot,False,0.7257640341936206
+Sirajganj,Wheat,baseline,False,1.2612657827165894
+Sirajganj,Wheat,dry,False,1.4455579267802625
+Sirajganj,Wheat,hot,False,1.7600123223562119
+Sirajganj,Wheat,dryhot,False,1.6914487487447607
+Thakurgaon,Boro Rice,baseline,False,0.9496151315358698
+Thakurgaon,Boro Rice,dry,False,0.8576754262889438
+Thakurgaon,Boro Rice,hot,False,1.2775838321379407
+Thakurgaon,Boro Rice,dryhot,False,0.908124699663517
+Thakurgaon,Potato,baseline,False,0.5703887614048301
+Thakurgaon,Potato,dry,False,1.2771955595508826
+Thakurgaon,Potato,hot,False,0.6004974307709555
+Thakurgaon,Potato,dryhot,False,0.7682333852251895
+Thakurgaon,Wheat,baseline,False,0.3762531310234229
+Thakurgaon,Wheat,dry,False,1.26996602886696
+Thakurgaon,Wheat,hot,False,1.11097452049109
+Thakurgaon,Wheat,dryhot,False,1.6213160895429848

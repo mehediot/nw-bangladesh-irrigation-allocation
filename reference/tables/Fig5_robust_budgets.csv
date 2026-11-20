@@ -1,0 +1,10 @@
+nir_uncertainty,uncertainty_set,gamma,feasible_cases_of_48_at_budget_0.80,feasible_cases_of_48_at_budget_0.90,feasible_cases_of_48_at_budget_1.00,budget_needed_to_hold_80pct_median,budget_needed_to_hold_80pct_worst_case,cases_holding_80pct_at_budget_0.80,budget_needed_to_hold_90pct_median,budget_needed_to_hold_90pct_worst_case,cases_holding_90pct_at_budget_0.80
+Nominal NIR (Gamma 0),nominal,0,48,48,48,0.7829420045455058,0.7993968414343956,48,0.8606569279682745,0.8835319804240651,0
+"Temporal NIR deviation (year-to-year CV), Gamma 1",temporal_cv,1,48,48,48,0.8309831890969929,0.8441219433112667,12,0.906018810420075,0.9418231185548696,0
+"Temporal NIR deviation (year-to-year CV), Gamma 2",temporal_cv,2,48,48,48,0.8430309960318874,0.8666766849352291,3,0.9261238764693772,0.9571395375033068,0
+"Temporal NIR deviation (year-to-year CV), Gamma 3",temporal_cv,3,48,48,48,0.8457917307506093,0.8676136466794196,2,0.9336290899806804,0.958593039277283,0
+"Temporal NIR deviation (year-to-year CV), Gamma 4",temporal_cv,4,48,48,48,0.8462031809159418,0.8678334625928288,2,0.9351232250066436,0.9588726706254618,0
+"Spatial upper NIR (range across districts), Gamma 1",spatial_upper,1,36,48,48,0.8864136494195946,0.9011499035131002,3,0.9580117083316406,1.006888062513826,0
+"Spatial upper NIR (range across districts), Gamma 2",spatial_upper,2,36,48,48,0.9022100231331994,0.9247694769400208,0,0.9858295574720995,1.0205078191095796,0
+"Spatial upper NIR (range across districts), Gamma 3",spatial_upper,3,36,48,48,0.9050996255866548,0.926338479139526,0,0.9985457888228868,1.022607225865729,0
+"Spatial upper NIR (range across districts), Gamma 4",spatial_upper,4,36,48,48,0.9058253832401892,0.9266623727140418,0,1.0006978196801404,1.0230075226880189,0

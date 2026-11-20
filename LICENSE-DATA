@@ -1,0 +1,20 @@
+Data licence
+
+The data files created for this work (the files in inputs/ that were compiled
+or derived by the authors, the files in evidence/, and all outputs in
+reference/ and in generated/ after a run) are licensed under the
+Creative Commons Attribution 4.0 International licence (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/
+
+Copyright (c) 2026 MD. Mehedi Zaman Khan, Md. Toukir Ahmed, Md. Ashiqussalehin
+
+Third-party data keep their own terms:
+- Statistics of the Bangladesh Bureau of Statistics (BBS), Yearbook of
+  Agricultural Statistics, editions 2015 to 2025.
+- NASA POWER data (NASA Langley Research Center); please acknowledge the
+  NASA POWER project when using these data.
+- geoBoundaries district boundaries for Bangladesh (source BBS / OCHA ROAP),
+  CC BY 3.0 IGO.
+- Values taken from the reports and papers cited in the input files.
+
+The code is licensed separately under the MIT licence (see LICENSE).

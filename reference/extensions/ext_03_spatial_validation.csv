@@ -1,0 +1,7 @@
+scheme,crop,n_folds,n_obs,GBT_spatial_RMSE,GBT_spatial_R2
+leave_one_district_out,Boro Rice,16,176,0.2627376987641758,-0.034387210803138224
+leave_one_district_out,Wheat,16,176,0.3860046804184298,0.15483167003819198
+leave_one_district_out,Potato,16,176,3.452615084531509,0.10683961397444075
+leave_one_climate_cell_out,Boro Rice,11,176,0.24863147867756863,0.07370230261818678
+leave_one_climate_cell_out,Wheat,11,176,0.3835156020572273,0.16569634439762326
+leave_one_climate_cell_out,Potato,11,176,3.4643791167873514,0.10074274665898542

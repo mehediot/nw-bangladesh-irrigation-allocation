@@ -1,0 +1,17 @@
+district,latitude,longitude,merra2_cell_elevation_m,file
+Bogura,24.85,89.37,20.3,POWER_Bogura.csv
+Chapainawabganj,24.6,88.27,27.43,POWER_Chapainawabganj.csv
+Dinajpur,25.63,88.64,33.1,POWER_Dinajpur.csv
+Gaibandha,25.33,89.53,28.12,POWER_Gaibandha.csv
+Joypurhat,25.1,89.02,24.26,POWER_Joypurhat.csv
+Kurigram,25.81,89.64,38.86,POWER_Kurigram.csv
+Lalmonirhat,25.92,89.45,38.86,POWER_Lalmonirhat.csv
+Naogaon,24.8,88.94,24.26,POWER_Naogaon.csv
+Natore,24.42,88.98,19.46,POWER_Natore.csv
+Nilphamari,25.93,88.86,50.93,POWER_Nilphamari.csv
+Pabna,24.0,89.24,12.0,POWER_Pabna.csv
+Panchagarh,26.34,88.55,139.31,POWER_Panchagarh.csv
+Rajshahi,24.37,88.6,19.46,POWER_Rajshahi.csv
+Rangpur,25.75,89.25,38.86,POWER_Rangpur.csv
+Sirajganj,24.45,89.7,15.29,POWER_Sirajganj.csv
+Thakurgaon,26.03,88.46,50.93,POWER_Thakurgaon.csv

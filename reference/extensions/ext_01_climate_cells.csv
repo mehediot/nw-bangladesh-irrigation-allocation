@@ -1,0 +1,17 @@
+district,climate_cell,cell_members,cell_size,same_grouping_in_pm_cache_rain
+Bogura,C01,Bogura,1,True
+Chapainawabganj,C02,Chapainawabganj,1,True
+Dinajpur,C03,Dinajpur,1,True
+Gaibandha,C04,Gaibandha,1,True
+Joypurhat,C05,Joypurhat; Naogaon,2,True
+Kurigram,C06,Kurigram; Lalmonirhat; Rangpur,3,True
+Lalmonirhat,C06,Kurigram; Lalmonirhat; Rangpur,3,True
+Naogaon,C05,Joypurhat; Naogaon,2,True
+Natore,C07,Natore; Rajshahi,2,True
+Nilphamari,C08,Nilphamari; Thakurgaon,2,True
+Pabna,C09,Pabna,1,True
+Panchagarh,C10,Panchagarh,1,True
+Rajshahi,C07,Natore; Rajshahi,2,True
+Rangpur,C06,Kurigram; Lalmonirhat; Rangpur,3,True
+Sirajganj,C11,Sirajganj,1,True
+Thakurgaon,C08,Nilphamari; Thakurgaon,2,True

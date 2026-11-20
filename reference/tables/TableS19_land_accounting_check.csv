@@ -1,0 +1,3 @@
+budget_ratio,boro_floor,crop_limits,land_pool_thousand_ha,irrigated_area_with_land_balance_thousand_ha,irrigated_area_without_land_balance_thousand_ha,reduction_with_land_balance_thousand_ha,reduction_without_land_balance_thousand_ha,districts_where_land_balance_binds
+0.8,0.8,observed_max_2015_2025,2411.435758200153,1963.229912745154,1963.229912745154,448.2058454549992,448.2058454549992,0
+0.9,0.8,observed_max_2015_2025,2411.435758200153,2284.875382644239,2284.875382644239,126.56037555591436,126.56037555591436,0

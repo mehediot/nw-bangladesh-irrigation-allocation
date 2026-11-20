@@ -1,0 +1,4 @@
+crop,climate_SHAP_share_pct,top_climate_feature
+Boro Rice,21.69064861317563,terminal_tmax_c
+Potato,13.057216607429767,season_tmin_c
+Wheat,24.466908198650607,monsoon_prev_rain_mm

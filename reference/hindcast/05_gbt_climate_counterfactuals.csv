@@ -1,0 +1,577 @@
+district,crop,year_end,state,GBT_counterfactual
+Bogura,Boro Rice,2023,baseline,3.909601924300807
+Chapainawabganj,Boro Rice,2023,baseline,4.221985757163685
+Dinajpur,Boro Rice,2023,baseline,4.157171881938289
+Gaibandha,Boro Rice,2023,baseline,4.040469754140552
+Joypurhat,Boro Rice,2023,baseline,4.164044517086429
+Kurigram,Boro Rice,2023,baseline,4.175386460435793
+Lalmonirhat,Boro Rice,2023,baseline,4.0863644829007315
+Naogaon,Boro Rice,2023,baseline,4.312644784226319
+Natore,Boro Rice,2023,baseline,4.481281422183987
+Nilphamari,Boro Rice,2023,baseline,4.299621873269769
+Pabna,Boro Rice,2023,baseline,4.154842316567606
+Panchagarh,Boro Rice,2023,baseline,4.046224439642301
+Rajshahi,Boro Rice,2023,baseline,4.115434385686535
+Rangpur,Boro Rice,2023,baseline,4.416792413975485
+Sirajganj,Boro Rice,2023,baseline,4.283579139418302
+Thakurgaon,Boro Rice,2023,baseline,3.979529029898521
+Bogura,Boro Rice,2023,dry,3.911080258273151
+Chapainawabganj,Boro Rice,2023,dry,4.133412530213817
+Dinajpur,Boro Rice,2023,dry,4.160249539007619
+Gaibandha,Boro Rice,2023,dry,4.053228313363133
+Joypurhat,Boro Rice,2023,dry,4.186856632393107
+Kurigram,Boro Rice,2023,dry,4.239395818411018
+Lalmonirhat,Boro Rice,2023,dry,4.1503738408759565
+Naogaon,Boro Rice,2023,dry,4.340203605935244
+Natore,Boro Rice,2023,dry,4.430047911629564
+Nilphamari,Boro Rice,2023,dry,4.368824744557871
+Pabna,Boro Rice,2023,dry,4.211812042628052
+Panchagarh,Boro Rice,2023,dry,4.124154262340579
+Rajshahi,Boro Rice,2023,dry,4.064200875132111
+Rangpur,Boro Rice,2023,dry,4.48080177195071
+Sirajganj,Boro Rice,2023,dry,4.278918644930127
+Thakurgaon,Boro Rice,2023,dry,4.03875227418663
+Bogura,Boro Rice,2023,hot,3.909601924300807
+Chapainawabganj,Boro Rice,2023,hot,4.221985757163685
+Dinajpur,Boro Rice,2023,hot,4.1811606504011865
+Gaibandha,Boro Rice,2023,hot,4.040469754140552
+Joypurhat,Boro Rice,2023,hot,4.112116760821324
+Kurigram,Boro Rice,2023,hot,4.1764595953614805
+Lalmonirhat,Boro Rice,2023,hot,4.087437617826419
+Naogaon,Boro Rice,2023,hot,4.258183668782153
+Natore,Boro Rice,2023,hot,4.481281422183987
+Nilphamari,Boro Rice,2023,hot,4.254620806351752
+Pabna,Boro Rice,2023,hot,4.154842316567606
+Panchagarh,Boro Rice,2023,hot,4.048931256497805
+Rajshahi,Boro Rice,2023,hot,4.115434385686535
+Rangpur,Boro Rice,2023,hot,4.4178655489011724
+Sirajganj,Boro Rice,2023,hot,4.283579139418302
+Thakurgaon,Boro Rice,2023,hot,3.945291144600796
+Bogura,Boro Rice,2023,dryhot,3.911080258273151
+Chapainawabganj,Boro Rice,2023,dryhot,4.133412530213817
+Dinajpur,Boro Rice,2023,dryhot,4.184238307470517
+Gaibandha,Boro Rice,2023,dryhot,4.053228313363133
+Joypurhat,Boro Rice,2023,dryhot,4.1272064913585105
+Kurigram,Boro Rice,2023,dryhot,4.2404689533367055
+Lalmonirhat,Boro Rice,2023,dryhot,4.151446975801644
+Naogaon,Boro Rice,2023,dryhot,4.278020105721587
+Natore,Boro Rice,2023,dryhot,4.430047911629564
+Nilphamari,Boro Rice,2023,dryhot,4.331388723549558
+Pabna,Boro Rice,2023,dryhot,4.211812042628052
+Panchagarh,Boro Rice,2023,dryhot,4.126861079196083
+Rajshahi,Boro Rice,2023,dryhot,4.064200875132111
+Rangpur,Boro Rice,2023,dryhot,4.4818749068763974
+Sirajganj,Boro Rice,2023,dryhot,4.278918644930127
+Thakurgaon,Boro Rice,2023,dryhot,4.012079434798611
+Bogura,Boro Rice,2024,baseline,4.059227273088416
+Chapainawabganj,Boro Rice,2024,baseline,4.2665427596204415
+Dinajpur,Boro Rice,2024,baseline,4.233776675568395
+Gaibandha,Boro Rice,2024,baseline,4.1683279548972445
+Joypurhat,Boro Rice,2024,baseline,4.110442279151427
+Kurigram,Boro Rice,2024,baseline,4.265299933439667
+Lalmonirhat,Boro Rice,2024,baseline,4.1936199120343085
+Naogaon,Boro Rice,2024,baseline,4.374056165675815
+Natore,Boro Rice,2024,baseline,4.456459856779863
+Nilphamari,Boro Rice,2024,baseline,4.3584463002344345
+Pabna,Boro Rice,2024,baseline,4.240279524743292
+Panchagarh,Boro Rice,2024,baseline,4.247783731857626
+Rajshahi,Boro Rice,2024,baseline,4.196586943325746
+Rangpur,Boro Rice,2024,baseline,4.474582361405905
+Sirajganj,Boro Rice,2024,baseline,4.387957308585334
+Thakurgaon,Boro Rice,2024,baseline,4.056711908377374
+Bogura,Boro Rice,2024,dry,4.079695283518188
+Chapainawabganj,Boro Rice,2024,dry,4.256300265103707
+Dinajpur,Boro Rice,2024,dry,4.211022783485669
+Gaibandha,Boro Rice,2024,dry,4.17090009961338
+Joypurhat,Boro Rice,2024,dry,4.120659432981062
+Kurigram,Boro Rice,2024,dry,4.307913829347971
+Lalmonirhat,Boro Rice,2024,dry,4.236233807942613
+Naogaon,Boro Rice,2024,dry,4.389941629853833
+Natore,Boro Rice,2024,dry,4.46896194831726
+Nilphamari,Boro Rice,2024,dry,4.40545270296904
+Pabna,Boro Rice,2024,dry,4.292678878420589
+Panchagarh,Boro Rice,2024,dry,4.302124085323724
+Rajshahi,Boro Rice,2024,dry,4.209089034863143
+Rangpur,Boro Rice,2024,dry,4.517196257314209
+Sirajganj,Boro Rice,2024,dry,4.385803322989813
+Thakurgaon,Boro Rice,2024,dry,4.101564325516458
+Bogura,Boro Rice,2024,hot,4.059227273088416
+Chapainawabganj,Boro Rice,2024,hot,4.2665427596204415
+Dinajpur,Boro Rice,2024,hot,4.2471282257614265
+Gaibandha,Boro Rice,2024,hot,4.1683279548972445
+Joypurhat,Boro Rice,2024,hot,4.052964259951713
+Kurigram,Boro Rice,2024,hot,4.259322292870203
+Lalmonirhat,Boro Rice,2024,hot,4.187642271464845
+Naogaon,Boro Rice,2024,hot,4.3165781464761
+Natore,Boro Rice,2024,hot,4.488408114491637
+Nilphamari,Boro Rice,2024,hot,4.318007374370416
+Pabna,Boro Rice,2024,hot,4.240279524743292
+Panchagarh,Boro Rice,2024,hot,4.283258605564662
+Rajshahi,Boro Rice,2024,hot,4.228535201037521
+Rangpur,Boro Rice,2024,hot,4.468604720836441
+Sirajganj,Boro Rice,2024,hot,4.387957308585334
+Thakurgaon,Boro Rice,2024,hot,4.0211417408844445
+Bogura,Boro Rice,2024,dryhot,4.079695283518188
+Chapainawabganj,Boro Rice,2024,dryhot,4.256300265103707
+Dinajpur,Boro Rice,2024,dryhot,4.224374333678701
+Gaibandha,Boro Rice,2024,dryhot,4.17090009961338
+Joypurhat,Boro Rice,2024,dryhot,4.073000592189099
+Kurigram,Boro Rice,2024,dryhot,4.301936188778507
+Lalmonirhat,Boro Rice,2024,dryhot,4.230256167373149
+Naogaon,Boro Rice,2024,dryhot,4.34228278906187
+Natore,Boro Rice,2024,dryhot,4.500910206029034
+Nilphamari,Boro Rice,2024,dryhot,4.3650137771050215
+Pabna,Boro Rice,2024,dryhot,4.292678878420589
+Panchagarh,Boro Rice,2024,dryhot,4.33759895903076
+Rajshahi,Boro Rice,2024,dryhot,4.241037292574918
+Rangpur,Boro Rice,2024,dryhot,4.5112186167447454
+Sirajganj,Boro Rice,2024,dryhot,4.385803322989813
+Thakurgaon,Boro Rice,2024,dryhot,4.065994158023528
+Bogura,Boro Rice,2025,baseline,4.101703108491923
+Chapainawabganj,Boro Rice,2025,baseline,4.363171012687766
+Dinajpur,Boro Rice,2025,baseline,4.256446307552735
+Gaibandha,Boro Rice,2025,baseline,4.2492599802893105
+Joypurhat,Boro Rice,2025,baseline,4.120869123116797
+Kurigram,Boro Rice,2025,baseline,4.328180562378984
+Lalmonirhat,Boro Rice,2025,baseline,4.254561793921594
+Naogaon,Boro Rice,2025,baseline,4.4141774226934
+Natore,Boro Rice,2025,baseline,4.559044287348642
+Nilphamari,Boro Rice,2025,baseline,4.396603562952822
+Pabna,Boro Rice,2025,baseline,4.354090411166044
+Panchagarh,Boro Rice,2025,baseline,4.266904326738263
+Rajshahi,Boro Rice,2025,baseline,4.399865595300199
+Rangpur,Boro Rice,2025,baseline,4.532161488779048
+Sirajganj,Boro Rice,2025,baseline,4.457803923779046
+Thakurgaon,Boro Rice,2025,baseline,4.114394516740447
+Bogura,Boro Rice,2025,dry,4.1036036301128345
+Chapainawabganj,Boro Rice,2025,dry,4.373235522489123
+Dinajpur,Boro Rice,2025,dry,4.2300304149137835
+Gaibandha,Boro Rice,2025,dry,4.2660804181852985
+Joypurhat,Boro Rice,2025,dry,4.083632490174034
+Kurigram,Boro Rice,2025,dry,4.33556750094256
+Lalmonirhat,Boro Rice,2025,dry,4.26194873248517
+Naogaon,Boro Rice,2025,dry,4.381026402248574
+Natore,Boro Rice,2025,dry,4.564581638181317
+Nilphamari,Boro Rice,2025,dry,4.420810939412386
+Pabna,Boro Rice,2025,dry,4.3669261503845975
+Panchagarh,Boro Rice,2025,dry,4.28300524672504
+Rajshahi,Boro Rice,2025,dry,4.4011921842885835
+Rangpur,Boro Rice,2025,dry,4.539548427342623
+Sirajganj,Boro Rice,2025,dry,4.457803923779046
+Thakurgaon,Boro Rice,2025,dry,4.125329734338089
+Bogura,Boro Rice,2025,hot,4.104103663392341
+Chapainawabganj,Boro Rice,2025,hot,4.3655715675881845
+Dinajpur,Boro Rice,2025,hot,4.3001533314312175
+Gaibandha,Boro Rice,2025,hot,4.266257524269716
+Joypurhat,Boro Rice,2025,hot,4.1049719727147
+Kurigram,Boro Rice,2025,hot,4.35002433603571
+Lalmonirhat,Boro Rice,2025,hot,4.27640556757832
+Naogaon,Boro Rice,2025,hot,4.398280272291303
+Natore,Boro Rice,2025,hot,4.584898411907451
+Nilphamari,Boro Rice,2025,hot,4.415759382766004
+Pabna,Boro Rice,2025,hot,4.354090411166044
+Panchagarh,Boro Rice,2025,hot,4.292025042557215
+Rajshahi,Boro Rice,2025,hot,4.425719719859008
+Rangpur,Boro Rice,2025,hot,4.554005262435774
+Sirajganj,Boro Rice,2025,hot,4.457803923779046
+Thakurgaon,Boro Rice,2025,hot,4.140791594524656
+Bogura,Boro Rice,2025,dryhot,4.106004185013253
+Chapainawabganj,Boro Rice,2025,dryhot,4.375636077389542
+Dinajpur,Boro Rice,2025,dryhot,4.273737438792266
+Gaibandha,Boro Rice,2025,dryhot,4.283077962165704
+Joypurhat,Boro Rice,2025,dryhot,4.065283927222583
+Kurigram,Boro Rice,2025,dryhot,4.3574112745992855
+Lalmonirhat,Boro Rice,2025,dryhot,4.2837925061418956
+Naogaon,Boro Rice,2025,dryhot,4.362677839297123
+Natore,Boro Rice,2025,dryhot,4.590435762740126
+Nilphamari,Boro Rice,2025,dryhot,4.439966759225568
+Pabna,Boro Rice,2025,dryhot,4.3669261503845975
+Panchagarh,Boro Rice,2025,dryhot,4.308125962543992
+Rajshahi,Boro Rice,2025,dryhot,4.427046308847393
+Rangpur,Boro Rice,2025,dryhot,4.561392200999349
+Sirajganj,Boro Rice,2025,dryhot,4.457803923779046
+Thakurgaon,Boro Rice,2025,dryhot,4.151726812122298
+Bogura,Wheat,2023,baseline,2.7474384688580615
+Chapainawabganj,Wheat,2023,baseline,3.4516342054707825
+Dinajpur,Wheat,2023,baseline,3.094630903655539
+Gaibandha,Wheat,2023,baseline,2.783190440210925
+Joypurhat,Wheat,2023,baseline,2.6670770466736062
+Kurigram,Wheat,2023,baseline,3.168171758682079
+Lalmonirhat,Wheat,2023,baseline,3.0618727882754904
+Naogaon,Wheat,2023,baseline,3.214646776464971
+Natore,Wheat,2023,baseline,3.1167972142101683
+Nilphamari,Wheat,2023,baseline,3.246018014402408
+Pabna,Wheat,2023,baseline,3.0369412195396475
+Panchagarh,Wheat,2023,baseline,3.424149737742702
+Rajshahi,Wheat,2023,baseline,3.1243738210659653
+Rangpur,Wheat,2023,baseline,3.2201621986690574
+Sirajganj,Wheat,2023,baseline,2.857823294297129
+Thakurgaon,Wheat,2023,baseline,3.552981097585282
+Bogura,Wheat,2023,dry,2.7162817409310653
+Chapainawabganj,Wheat,2023,dry,3.367921808197998
+Dinajpur,Wheat,2023,dry,3.0723849839845156
+Gaibandha,Wheat,2023,dry,2.7251001516045794
+Joypurhat,Wheat,2023,dry,2.6613076192370926
+Kurigram,Wheat,2023,dry,3.075890777943942
+Lalmonirhat,Wheat,2023,dry,2.968755040330051
+Naogaon,Wheat,2023,dry,3.2206066782620084
+Natore,Wheat,2023,dry,3.07212660001236
+Nilphamari,Wheat,2023,dry,3.06694765147959
+Pabna,Wheat,2023,dry,3.067880572388873
+Panchagarh,Wheat,2023,dry,3.2346727510637407
+Rajshahi,Wheat,2023,dry,3.079703206868157
+Rangpur,Wheat,2023,dry,3.128403544339392
+Sirajganj,Wheat,2023,dry,2.845333584530699
+Thakurgaon,Wheat,2023,dry,3.355101151665307
+Bogura,Wheat,2023,hot,2.8058989987306964
+Chapainawabganj,Wheat,2023,hot,3.513206633371505
+Dinajpur,Wheat,2023,hot,3.1903269315359566
+Gaibandha,Wheat,2023,hot,2.7892981079713506
+Joypurhat,Wheat,2023,hot,2.682612890099014
+Kurigram,Wheat,2023,hot,3.2319187749382525
+Lalmonirhat,Wheat,2023,hot,3.125619804531664
+Naogaon,Wheat,2023,hot,3.2504915581848772
+Natore,Wheat,2023,hot,3.165500321952754
+Nilphamari,Wheat,2023,hot,3.291807956352672
+Pabna,Wheat,2023,hot,3.1404175254786724
+Panchagarh,Wheat,2023,hot,3.4430962893030124
+Rajshahi,Wheat,2023,hot,3.173076928808551
+Rangpur,Wheat,2023,hot,3.283909214925231
+Sirajganj,Wheat,2023,hot,2.913166866956562
+Thakurgaon,Wheat,2023,hot,3.5816590493669307
+Bogura,Wheat,2023,dryhot,2.7700598562469834
+Chapainawabganj,Wheat,2023,dryhot,3.39386928405237
+Dinajpur,Wheat,2023,dryhot,3.142695259853257
+Gaibandha,Wheat,2023,dryhot,2.713414602528143
+Joypurhat,Wheat,2023,dryhot,2.6364412630006937
+Kurigram,Wheat,2023,dryhot,3.12046529474756
+Lalmonirhat,Wheat,2023,dryhot,3.013329557133669
+Naogaon,Wheat,2023,dryhot,3.216049260320108
+Natore,Wheat,2023,dryhot,3.085234915044146
+Nilphamari,Wheat,2023,dryhot,3.106643287989482
+Pabna,Wheat,2023,dryhot,3.130451998188288
+Panchagarh,Wheat,2023,dryhot,3.208403978440785
+Rajshahi,Wheat,2023,dryhot,3.092811521899943
+Rangpur,Wheat,2023,dryhot,3.17297806114301
+Sirajganj,Wheat,2023,dryhot,2.8917865461808967
+Thakurgaon,Wheat,2023,dryhot,3.3776847980065834
+Bogura,Wheat,2024,baseline,2.7653645035321013
+Chapainawabganj,Wheat,2024,baseline,3.652015264234622
+Dinajpur,Wheat,2024,baseline,3.151243857293014
+Gaibandha,Wheat,2024,baseline,2.7559292119903267
+Joypurhat,Wheat,2024,baseline,2.655634562003126
+Kurigram,Wheat,2024,baseline,3.2475906936186156
+Lalmonirhat,Wheat,2024,baseline,3.2333350595943067
+Naogaon,Wheat,2024,baseline,3.2373815590497648
+Natore,Wheat,2024,baseline,3.241474247238465
+Nilphamari,Wheat,2024,baseline,3.2758445811440775
+Pabna,Wheat,2024,baseline,3.0765493324213464
+Panchagarh,Wheat,2024,baseline,3.5481742130829907
+Rajshahi,Wheat,2024,baseline,3.2029112437383986
+Rangpur,Wheat,2024,baseline,3.2982305527286364
+Sirajganj,Wheat,2024,baseline,2.9266874738944506
+Thakurgaon,Wheat,2024,baseline,3.5685851446863355
+Bogura,Wheat,2024,dry,2.8171992629720752
+Chapainawabganj,Wheat,2024,dry,3.733638855422999
+Dinajpur,Wheat,2024,dry,3.1902781495681776
+Gaibandha,Wheat,2024,dry,2.7383890565094493
+Joypurhat,Wheat,2024,dry,2.8377651101703254
+Kurigram,Wheat,2024,dry,3.1749539541591236
+Lalmonirhat,Wheat,2024,dry,3.1432506575302304
+Naogaon,Wheat,2024,dry,3.4375469248574744
+Natore,Wheat,2024,dry,3.3997034601970713
+Nilphamari,Wheat,2024,dry,3.1480823544949543
+Pabna,Wheat,2024,dry,3.1860967394410946
+Panchagarh,Wheat,2024,dry,3.38790674518805
+Rajshahi,Wheat,2024,dry,3.375452176060677
+Rangpur,Wheat,2024,dry,3.2293477842567944
+Sirajganj,Wheat,2024,dry,2.9305515191974223
+Thakurgaon,Wheat,2024,dry,3.4272317608703675
+Bogura,Wheat,2024,hot,2.7656563264874245
+Chapainawabganj,Wheat,2024,hot,3.6630331116645527
+Dinajpur,Wheat,2024,hot,3.1591719791698916
+Gaibandha,Wheat,2024,hot,2.744950251945874
+Joypurhat,Wheat,2024,hot,2.662758407167571
+Kurigram,Wheat,2024,hot,3.2430693470373755
+Lalmonirhat,Wheat,2024,hot,3.2311837255275018
+Naogaon,Wheat,2024,hot,3.24450540421421
+Natore,Wheat,2024,hot,3.2550102883516563
+Nilphamari,Wheat,2024,hot,3.2761364040994008
+Pabna,Wheat,2024,hot,3.087567179851277
+Panchagarh,Wheat,2024,hot,3.554700348605566
+Rajshahi,Wheat,2024,hot,3.21644728485159
+Rangpur,Wheat,2024,hot,3.2937092061473963
+Sirajganj,Wheat,2024,hot,2.926979296849774
+Thakurgaon,Wheat,2024,hot,3.5688769676416587
+Bogura,Wheat,2024,dryhot,2.8135343384123406
+Chapainawabganj,Wheat,2024,dryhot,3.7022179902361834
+Dinajpur,Wheat,2024,dryhot,3.1942495239299973
+Gaibandha,Wheat,2024,dryhot,2.7195324310497835
+Joypurhat,Wheat,2024,dryhot,2.793560746290029
+Kurigram,Wheat,2024,dryhot,3.15801389153809
+Lalmonirhat,Wheat,2024,dryhot,3.1286806074236315
+Naogaon,Wheat,2024,dryhot,3.393342560977178
+Natore,Wheat,2024,dryhot,3.3708007886935167
+Nilphamari,Wheat,2024,dryhot,3.1355649628583713
+Pabna,Wheat,2024,dryhot,3.145786377826284
+Panchagarh,Wheat,2024,dryhot,3.385064255473044
+Rajshahi,Wheat,2024,dryhot,3.3465495045571223
+Rangpur,Wheat,2024,dryhot,3.2124077216357607
+Sirajganj,Wheat,2024,dryhot,2.9180341275608392
+Thakurgaon,Wheat,2024,dryhot,3.4147143692337845
+Bogura,Wheat,2025,baseline,3.0916776529581274
+Chapainawabganj,Wheat,2025,baseline,4.068193232416951
+Dinajpur,Wheat,2025,baseline,3.48632076824582
+Gaibandha,Wheat,2025,baseline,3.141778397204496
+Joypurhat,Wheat,2025,baseline,3.1355764664709236
+Kurigram,Wheat,2025,baseline,3.483267644686398
+Lalmonirhat,Wheat,2025,baseline,3.4784785963087015
+Naogaon,Wheat,2025,baseline,3.617915934869295
+Natore,Wheat,2025,baseline,3.803524849545174
+Nilphamari,Wheat,2025,baseline,3.5067971909972484
+Pabna,Wheat,2025,baseline,3.4586193047325042
+Panchagarh,Wheat,2025,baseline,3.735858136155591
+Rajshahi,Wheat,2025,baseline,3.7045941479515916
+Rangpur,Wheat,2025,baseline,3.521252797914345
+Sirajganj,Wheat,2025,baseline,3.290856612683893
+Thakurgaon,Wheat,2025,baseline,3.7947051063174717
+Bogura,Wheat,2025,dry,3.2427236140773235
+Chapainawabganj,Wheat,2025,dry,4.0749903018416385
+Dinajpur,Wheat,2025,dry,3.6386281186746583
+Gaibandha,Wheat,2025,dry,3.1101501712510027
+Joypurhat,Wheat,2025,dry,3.2856388921171336
+Kurigram,Wheat,2025,dry,3.4245456176444624
+Lalmonirhat,Wheat,2025,dry,3.409128164154705
+Naogaon,Wheat,2025,dry,3.786758592142146
+Natore,Wheat,2025,dry,3.834890790781095
+Nilphamari,Wheat,2025,dry,3.465229355132252
+Pabna,Wheat,2025,dry,3.5951373623158105
+Panchagarh,Wheat,2025,dry,3.583304408402114
+Rajshahi,Wheat,2025,dry,3.7344467241023622
+Rangpur,Wheat,2025,dry,3.453779680968349
+Sirajganj,Wheat,2025,dry,3.3045083932139034
+Thakurgaon,Wheat,2025,dry,3.7251752999303025
+Bogura,Wheat,2025,hot,3.156247976462425
+Chapainawabganj,Wheat,2025,hot,4.0814638716487375
+Dinajpur,Wheat,2025,hot,3.559077259636844
+Gaibandha,Wheat,2025,hot,3.1557152684563494
+Joypurhat,Wheat,2025,hot,3.12927709862632
+Kurigram,Wheat,2025,hot,3.525742535027072
+Lalmonirhat,Wheat,2025,hot,3.5209534866493755
+Naogaon,Wheat,2025,hot,3.6365319064841564
+Natore,Wheat,2025,hot,3.7765024529684608
+Nilphamari,Wheat,2025,hot,3.5713675145015458
+Pabna,Wheat,2025,hot,3.513779335169174
+Panchagarh,Wheat,2025,hot,3.7463825377118596
+Rajshahi,Wheat,2025,hot,3.6885907425531594
+Rangpur,Wheat,2025,hot,3.563727688255019
+Sirajganj,Wheat,2025,hot,3.3554269361881905
+Thakurgaon,Wheat,2025,hot,3.8461505847017383
+Bogura,Wheat,2025,dryhot,3.3072939375816213
+Chapainawabganj,Wheat,2025,dryhot,4.048474638199086
+Dinajpur,Wheat,2025,dryhot,3.688790518003402
+Gaibandha,Wheat,2025,dryhot,3.1055108790705095
+Joypurhat,Wheat,2025,dryhot,3.2447566624769197
+Kurigram,Wheat,2025,dryhot,3.4616809002878286
+Lalmonirhat,Wheat,2025,dryhot,3.446263446798071
+Naogaon,Wheat,2025,dryhot,3.770791701961397
+Natore,Wheat,2025,dryhot,3.7763970683561765
+Nilphamari,Wheat,2025,dryhot,3.5112235152042026
+Pabna,Wheat,2025,dryhot,3.6032052204686913
+Panchagarh,Wheat,2025,dryhot,3.5884892022610755
+Rajshahi,Wheat,2025,dryhot,3.686971992855725
+Rangpur,Wheat,2025,dryhot,3.4909149636117154
+Sirajganj,Wheat,2025,dryhot,3.350502553285855
+Thakurgaon,Wheat,2025,dryhot,3.7580446148822224
+Bogura,Potato,2023,baseline,19.85568926081944
+Chapainawabganj,Potato,2023,baseline,18.44266998901556
+Dinajpur,Potato,2023,baseline,19.700237964726906
+Gaibandha,Potato,2023,baseline,18.530700885259485
+Joypurhat,Potato,2023,baseline,22.33468267879464
+Kurigram,Potato,2023,baseline,23.51654903638754
+Lalmonirhat,Potato,2023,baseline,19.535833463251347
+Naogaon,Potato,2023,baseline,17.353147422984215
+Natore,Potato,2023,baseline,19.421485848520785
+Nilphamari,Potato,2023,baseline,19.52994125360242
+Pabna,Potato,2023,baseline,12.670246546879172
+Panchagarh,Potato,2023,baseline,20.542292249274173
+Rajshahi,Potato,2023,baseline,24.12908419485965
+Rangpur,Potato,2023,baseline,20.313648539268787
+Sirajganj,Potato,2023,baseline,12.93696431610437
+Thakurgaon,Potato,2023,baseline,20.636635712859672
+Bogura,Potato,2023,dry,19.749643944373215
+Chapainawabganj,Potato,2023,dry,19.276193223582375
+Dinajpur,Potato,2023,dry,19.756646991056304
+Gaibandha,Potato,2023,dry,18.533232704013113
+Joypurhat,Potato,2023,dry,22.225826413603283
+Kurigram,Potato,2023,dry,23.558836018597976
+Lalmonirhat,Potato,2023,dry,19.62238254038234
+Naogaon,Potato,2023,dry,17.244291157792855
+Natore,Potato,2023,dry,20.024816412385153
+Nilphamari,Potato,2023,dry,19.36635374182891
+Pabna,Potato,2023,dry,12.575389530118045
+Panchagarh,Potato,2023,dry,20.437600666461876
+Rajshahi,Potato,2023,dry,24.84837532771383
+Rangpur,Potato,2023,dry,20.28423704740997
+Sirajganj,Potato,2023,dry,12.84210729934324
+Thakurgaon,Potato,2023,dry,20.47304820108616
+Bogura,Potato,2023,hot,19.385371441006995
+Chapainawabganj,Potato,2023,hot,18.185845916601362
+Dinajpur,Potato,2023,hot,19.053339225661443
+Gaibandha,Potato,2023,hot,18.160700059474784
+Joypurhat,Potato,2023,hot,21.818938997208665
+Kurigram,Potato,2023,hot,22.840736121059525
+Lalmonirhat,Potato,2023,hot,19.165832637466647
+Naogaon,Potato,2023,hot,16.691180124418494
+Natore,Potato,2023,hot,19.161813003937503
+Nilphamari,Potato,2023,hot,18.775418848139367
+Pabna,Potato,2023,hot,12.110073751677762
+Panchagarh,Potato,2023,hot,19.753619829474527
+Rajshahi,Potato,2023,hot,23.901247434451566
+Rangpur,Potato,2023,hot,19.943647713484086
+Sirajganj,Potato,2023,hot,12.466646496291924
+Thakurgaon,Potato,2023,hot,19.96106491410562
+Bogura,Potato,2023,dryhot,19.27932612456077
+Chapainawabganj,Potato,2023,dryhot,19.019369151168178
+Dinajpur,Potato,2023,dryhot,19.10974825199084
+Gaibandha,Potato,2023,dryhot,18.163231878228412
+Joypurhat,Potato,2023,dryhot,21.71008273201731
+Kurigram,Potato,2023,dryhot,22.88302310326996
+Lalmonirhat,Potato,2023,dryhot,19.25238171459764
+Naogaon,Potato,2023,dryhot,16.582323859227134
+Natore,Potato,2023,dryhot,19.76514356780187
+Nilphamari,Potato,2023,dryhot,18.611831336365857
+Pabna,Potato,2023,dryhot,12.015216734916631
+Panchagarh,Potato,2023,dryhot,19.64892824666223
+Rajshahi,Potato,2023,dryhot,24.620538567305744
+Rangpur,Potato,2023,dryhot,19.91423622162527
+Sirajganj,Potato,2023,dryhot,12.371789479530797
+Thakurgaon,Potato,2023,dryhot,19.79747740233211
+Bogura,Potato,2024,baseline,20.657395866936284
+Chapainawabganj,Potato,2024,baseline,20.041472436843783
+Dinajpur,Potato,2024,baseline,21.72545533851473
+Gaibandha,Potato,2024,baseline,20.290687379709166
+Joypurhat,Potato,2024,baseline,24.352740611148203
+Kurigram,Potato,2024,baseline,24.46940581558909
+Lalmonirhat,Potato,2024,baseline,21.104804219566894
+Naogaon,Potato,2024,baseline,18.149486211280713
+Natore,Potato,2024,baseline,20.382450333704423
+Nilphamari,Potato,2024,baseline,21.164095515552845
+Pabna,Potato,2024,baseline,15.657577383812557
+Panchagarh,Potato,2024,baseline,21.669784456255154
+Rajshahi,Potato,2024,baseline,25.590969717453323
+Rangpur,Potato,2024,baseline,21.891950170274146
+Sirajganj,Potato,2024,baseline,16.009562365723898
+Thakurgaon,Potato,2024,baseline,22.17004674096509
+Bogura,Potato,2024,dry,20.75223009097046
+Chapainawabganj,Potato,2024,dry,20.22847707861261
+Dinajpur,Potato,2024,dry,22.14704208650365
+Gaibandha,Potato,2024,dry,20.753944812139327
+Joypurhat,Potato,2024,dry,25.20220740535248
+Kurigram,Potato,2024,dry,25.191632527720436
+Lalmonirhat,Potato,2024,dry,21.89038115099862
+Naogaon,Potato,2024,dry,18.912128933707525
+Natore,Potato,2024,dry,21.252454493845352
+Nilphamari,Potato,2024,dry,21.215695631103255
+Pabna,Potato,2024,dry,15.591527629079112
+Panchagarh,Potato,2024,dry,21.7530072502491
+Rajshahi,Potato,2024,dry,26.902512132192328
+Rangpur,Potato,2024,dry,22.247154228482696
+Sirajganj,Potato,2024,dry,15.97871906278402
+Thakurgaon,Potato,2024,dry,22.607822665734684
+Bogura,Potato,2024,hot,20.370366069863323
+Chapainawabganj,Potato,2024,hot,19.681831781103924
+Dinajpur,Potato,2024,hot,21.501735790971257
+Gaibandha,Potato,2024,hot,20.134347904405235
+Joypurhat,Potato,2024,hot,23.888663105859663
+Kurigram,Potato,2024,hot,24.245686268045617
+Lalmonirhat,Potato,2024,hot,20.88108467202342
+Naogaon,Potato,2024,hot,17.71228976982556
+Natore,Potato,2024,hot,20.26289109971033
+Nilphamari,Potato,2024,hot,20.924613721651312
+Pabna,Potato,2024,hot,15.250790711918297
+Panchagarh,Potato,2024,hot,21.16396189545369
+Rajshahi,Potato,2024,hot,25.51720444296117
+Rangpur,Potato,2024,hot,21.668230622730672
+Sirajganj,Potato,2024,hot,15.853222890419959
+Thakurgaon,Potato,2024,hot,21.771324158437764
+Bogura,Potato,2024,dryhot,20.515492057612402
+Chapainawabganj,Potato,2024,dryhot,19.92147513455865
+Dinajpur,Potato,2024,dryhot,21.973614302675077
+Gaibandha,Potato,2024,dryhot,20.6478971005503
+Joypurhat,Potato,2024,dryhot,24.73812990006394
+Kurigram,Potato,2024,dryhot,24.967912980176962
+Lalmonirhat,Potato,2024,dryhot,21.666661603455147
+Naogaon,Potato,2024,dryhot,18.47493249225237
+Natore,Potato,2024,dryhot,21.13289525985126
+Nilphamari,Potato,2024,dryhot,21.026505600916625
+Pabna,Potato,2024,dryhot,15.235032720899754
+Panchagarh,Potato,2024,dryhot,21.247184689447636
+Rajshahi,Potato,2024,dryhot,26.828746857700175
+Rangpur,Potato,2024,dryhot,22.02343468093922
+Sirajganj,Potato,2024,dryhot,15.872671351194988
+Thakurgaon,Potato,2024,dryhot,22.25939184692226
+Bogura,Potato,2025,baseline,21.693880316867386
+Chapainawabganj,Potato,2025,baseline,20.921885917022113
+Dinajpur,Potato,2025,baseline,22.874164669167204
+Gaibandha,Potato,2025,baseline,22.11647841612537
+Joypurhat,Potato,2025,baseline,25.695004823561423
+Kurigram,Potato,2025,baseline,24.77634404280583
+Lalmonirhat,Potato,2025,baseline,22.143869950261838
+Naogaon,Potato,2025,baseline,19.820109955906034
+Natore,Potato,2025,baseline,21.376465078164912
+Nilphamari,Potato,2025,baseline,21.471088731284322
+Pabna,Potato,2025,baseline,15.655013597637758
+Panchagarh,Potato,2025,baseline,21.695759288839128
+Rajshahi,Potato,2025,baseline,26.12177976029241
+Rangpur,Potato,2025,baseline,23.219979727367377
+Sirajganj,Potato,2025,baseline,15.57732032965947
+Thakurgaon,Potato,2025,baseline,22.57641480188472
+Bogura,Potato,2025,dry,21.58993319847982
+Chapainawabganj,Potato,2025,dry,20.987895713111566
+Dinajpur,Potato,2025,dry,22.7684594740936
+Gaibandha,Potato,2025,dry,22.133294521934367
+Joypurhat,Potato,2025,dry,26.087995784541548
+Kurigram,Potato,2025,dry,24.905844505908235
+Lalmonirhat,Potato,2025,dry,22.336989424471717
+Naogaon,Potato,2025,dry,19.979812176077353
+Natore,Potato,2025,dry,21.855941646449022
+Nilphamari,Potato,2025,dry,21.427457156749398
+Pabna,Potato,2025,dry,15.409593889128875
+Panchagarh,Potato,2025,dry,21.694825353572828
+Rajshahi,Potato,2025,dry,26.810107852641703
+Rangpur,Potato,2025,dry,23.413099201577257
+Sirajganj,Potato,2025,dry,15.343089588859083
+Thakurgaon,Potato,2025,dry,22.458604581773315
+Bogura,Potato,2025,hot,20.571603989350567
+Chapainawabganj,Potato,2025,hot,20.93095187080871
+Dinajpur,Potato,2025,hot,22.60739818051698
+Gaibandha,Potato,2025,hot,21.019234897121216
+Joypurhat,Potato,2025,hot,25.361130191027843
+Kurigram,Potato,2025,hot,24.25854500929154
+Lalmonirhat,Potato,2025,hot,21.93988570584592
+Naogaon,Potato,2025,hot,19.486235323372455
+Natore,Potato,2025,hot,21.49302544781828
+Nilphamari,Potato,2025,hot,21.239181510487068
+Pabna,Potato,2025,hot,15.80836513155245
+Panchagarh,Potato,2025,hot,21.424666900539854
+Rajshahi,Potato,2025,hot,26.277525297447795
+Rangpur,Potato,2025,hot,23.01599548295146
+Sirajganj,Potato,2025,hot,15.310553841009252
+Thakurgaon,Potato,2025,hot,22.344507581087466
+Bogura,Potato,2025,dryhot,20.45224558596701
+Chapainawabganj,Potato,2025,dryhot,20.951638807193586
+Dinajpur,Potato,2025,dryhot,22.564475229677683
+Gaibandha,Potato,2025,dryhot,21.02063971793422
+Joypurhat,Potato,2025,dryhot,25.816903396242274
+Kurigram,Potato,2025,dryhot,24.388045472393944
+Lalmonirhat,Potato,2025,dryhot,22.1330051800558
+Naogaon,Potato,2025,dryhot,19.70871978777808
+Natore,Potato,2025,dryhot,21.97250201610239
+Nilphamari,Potato,2025,dryhot,21.195549935952144
+Pabna,Potato,2025,dryhot,15.562945423043566
+Panchagarh,Potato,2025,dryhot,21.423732965273555
+Rajshahi,Potato,2025,dryhot,26.96585338979709
+Rangpur,Potato,2025,dryhot,23.20911495716134
+Sirajganj,Potato,2025,dryhot,15.076323100208864
+Thakurgaon,Potato,2025,dryhot,22.22669736097606

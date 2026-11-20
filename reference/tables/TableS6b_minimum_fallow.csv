@@ -1,0 +1,4 @@
+boro_floor,min_fallow_pct_at_budget_1.00,districts_infeasible_at_budget_1.00,min_fallow_pct_at_budget_0.90,districts_infeasible_at_budget_0.90,min_fallow_pct_at_budget_0.80,districts_infeasible_at_budget_0.80,min_fallow_pct_at_budget_0.70,districts_infeasible_at_budget_0.70
+1.0,0.0,0,,2,,7,,13
+0.9,0.0,0,8.747628796849016,0,,4,,7
+0.8,0.0,0,5.248341164617098,0,18.586679903491632,0,,4

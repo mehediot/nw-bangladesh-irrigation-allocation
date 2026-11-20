@@ -1,0 +1,337 @@
+variant_family,variant,district,score,rank
+primary,"equal weights, min-max",Bogura,0.6750927903307711,3
+primary,"equal weights, min-max",Chapainawabganj,0.5754722901231856,8
+primary,"equal weights, min-max",Dinajpur,0.5782440923513358,7
+primary,"equal weights, min-max",Gaibandha,0.6520536049099565,5
+primary,"equal weights, min-max",Joypurhat,0.6846246955054198,2
+primary,"equal weights, min-max",Kurigram,0.6095640925337124,6
+primary,"equal weights, min-max",Lalmonirhat,0.5738373194059053,9
+primary,"equal weights, min-max",Naogaon,0.8225002506540718,1
+primary,"equal weights, min-max",Natore,0.5366592116505469,10
+primary,"equal weights, min-max",Nilphamari,0.44847588942598354,12
+primary,"equal weights, min-max",Pabna,0.40221076541777734,14
+primary,"equal weights, min-max",Panchagarh,0.3002553739669613,15
+primary,"equal weights, min-max",Rajshahi,0.4952513942333158,11
+primary,"equal weights, min-max",Rangpur,0.44229308043415866,13
+primary,"equal weights, min-max",Sirajganj,0.652908598363788,4
+primary,"equal weights, min-max",Thakurgaon,0.1763676530357695,16
+weights,groundwater x2,Bogura,0.6878580542865399,3
+weights,groundwater x2,Chapainawabganj,0.6098093457975174,4
+weights,groundwater x2,Dinajpur,0.5231702487506813,8
+weights,groundwater x2,Gaibandha,0.5431427677850316,7
+weights,groundwater x2,Joypurhat,0.7634685216290649,2
+weights,groundwater x2,Kurigram,0.5166602488874638,10
+weights,groundwater x2,Lalmonirhat,0.4531985023749419,11
+weights,groundwater x2,Naogaon,0.8566187777341436,1
+weights,groundwater x2,Natore,0.518391844635346,9
+weights,groundwater x2,Nilphamari,0.3363569170694877,14
+weights,groundwater x2,Pabna,0.37883756124282014,12
+weights,groundwater x2,Panchagarh,0.29801204329573383,15
+weights,groundwater x2,Rajshahi,0.5799000841365253,5
+weights,groundwater x2,Rangpur,0.36377109237690103,13
+weights,groundwater x2,Sirajganj,0.5645532436446359,6
+weights,groundwater x2,Thakurgaon,0.1715065090075964,16
+weights,demand x2,Bogura,0.6876218061762371,4
+weights,demand x2,Chapainawabganj,0.5277033464630075,10
+weights,demand x2,Dinajpur,0.6110333542352295,8
+weights,demand x2,Gaibandha,0.7249718392971745,3
+weights,demand x2,Joypurhat,0.6492356707006718,7
+weights,demand x2,Kurigram,0.6740115601162254,5
+weights,demand x2,Lalmonirhat,0.6553654126812632,6
+weights,demand x2,Naogaon,0.810616898180028,1
+weights,demand x2,Natore,0.537995876789843,9
+weights,demand x2,Nilphamari,0.5138668209315234,11
+weights,demand x2,Pabna,0.4123738622597904,14
+weights,demand x2,Panchagarh,0.29249241862821607,15
+weights,demand x2,Rajshahi,0.4455247701837793,13
+weights,demand x2,Rangpur,0.49660668959408805,12
+weights,demand x2,Sirajganj,0.7359716352003711,2
+weights,demand x2,Thakurgaon,0.15921871306937369,16
+weights,deficit x2,Bogura,0.6497985105295364,4
+weights,deficit x2,Chapainawabganj,0.5889041781090321,9
+weights,deficit x2,Dinajpur,0.6005286740680966,8
+weights,deficit x2,Gaibandha,0.6880462076476638,2
+weights,deficit x2,Joypurhat,0.6411698941865229,5
+weights,deficit x2,Kurigram,0.6380204685974479,6
+weights,deficit x2,Lalmonirhat,0.6129480431615111,7
+weights,deficit x2,Naogaon,0.8002650760480439,1
+weights,deficit x2,Natore,0.5535899135264518,10
+weights,deficit x2,Nilphamari,0.49520393027693965,11
+weights,deficit x2,Pabna,0.41542087275072137,14
+weights,deficit x2,Panchagarh,0.310261659976934,15
+weights,deficit x2,Rajshahi,0.460329328379643,13
+weights,deficit x2,Rangpur,0.46650145933148685,12
+weights,deficit x2,Sirajganj,0.658200916246357,3
+weights,deficit x2,Thakurgaon,0.19837773703033854,16
+drop_one_component,without groundwater,Bogura,0.6495622624192336,8
+drop_one_component,without groundwater,Chapainawabganj,0.5067981787745222,12
+drop_one_component,without groundwater,Dinajpur,0.6883917795526447,6
+drop_one_component,without groundwater,Gaibandha,0.8698752791598068,1
+drop_one_component,without groundwater,Joypurhat,0.5269370432581298,11
+drop_one_component,without groundwater,Kurigram,0.7953717798262097,4
+drop_one_component,without groundwater,Lalmonirhat,0.8151149534678325,3
+drop_one_component,without groundwater,Naogaon,0.7542631964939283,5
+drop_one_component,without groundwater,Natore,0.5731939456809486,10
+drop_one_component,without groundwater,Nilphamari,0.6727138341389755,7
+drop_one_component,without groundwater,Pabna,0.4489571737676916,13
+drop_one_component,without groundwater,Panchagarh,0.3047420353094163,15
+drop_one_component,without groundwater,Rajshahi,0.3259540144268969,14
+drop_one_component,without groundwater,Rangpur,0.5993370565486739,9
+drop_one_component,without groundwater,Sirajganj,0.8296193078020923,2
+drop_one_component,without groundwater,Thakurgaon,0.18608994109211582,16
+drop_one_component,without demand,Bogura,0.6500347586398391,4
+drop_one_component,without demand,Chapainawabganj,0.671010177443542,3
+drop_one_component,without demand,Dinajpur,0.5126655685835485,7
+drop_one_component,without demand,Gaibandha,0.5062171361355208,8
+drop_one_component,without demand,Joypurhat,0.7554027451149161,2
+drop_one_component,without demand,Kurigram,0.4806691573686861,10
+drop_one_component,without demand,Lalmonirhat,0.4107811328551897,11
+drop_one_component,without demand,Naogaon,0.8462669556021596,1
+drop_one_component,without demand,Natore,0.5339858813719549,6
+drop_one_component,without demand,Nilphamari,0.3176940264149039,14
+drop_one_component,without demand,Pabna,0.381884571733751,12
+drop_one_component,without demand,Panchagarh,0.3157812846444517,15
+drop_one_component,without demand,Rajshahi,0.5947046423323891,5
+drop_one_component,without demand,Rangpur,0.33366586211429977,13
+drop_one_component,without demand,Sirajganj,0.4867825246906218,9
+drop_one_component,without demand,Thakurgaon,0.21066553296856128,16
+drop_one_component,without deficit,Bogura,0.7256813499332406,3
+drop_one_component,without deficit,Chapainawabganj,0.5486085141514928,8
+drop_one_component,without deficit,Dinajpur,0.5336749289178141,9
+drop_one_component,without deficit,Gaibandha,0.5800683994345424,5
+drop_one_component,without deficit,Joypurhat,0.7715342981432137,2
+drop_one_component,without deficit,Kurigram,0.5526513404062414,7
+drop_one_component,without deficit,Lalmonirhat,0.49561587189469397,11
+drop_one_component,without deficit,Naogaon,0.8669705998661276,1
+drop_one_component,without deficit,Natore,0.5027978078987373,10
+drop_one_component,without deficit,Nilphamari,0.3550198077240715,14
+drop_one_component,without deficit,Pabna,0.37579055075188933,13
+drop_one_component,without deficit,Panchagarh,0.28024280194701584,15
+drop_one_component,without deficit,Rajshahi,0.5650955259406616,6
+drop_one_component,without deficit,Rangpur,0.39387632263950234,12
+drop_one_component,without deficit,Sirajganj,0.64232396259865,4
+drop_one_component,without deficit,Thakurgaon,0.13234748504663152,16
+normalisation,zscore,Bogura,0.4620160964689809,4
+normalisation,zscore,Chapainawabganj,0.08897522749936924,9
+normalisation,zscore,Dinajpur,0.19199402166354373,8
+normalisation,zscore,Gaibandha,0.5472989162985364,2
+normalisation,zscore,Joypurhat,0.4195671869699495,5
+normalisation,zscore,Kurigram,0.3570293964446092,6
+normalisation,zscore,Lalmonirhat,0.25280845659811596,7
+normalisation,zscore,Naogaon,1.0269430040435472,1
+normalisation,zscore,Natore,-0.011745510045779945,10
+normalisation,zscore,Nilphamari,-0.2418199872873285,11
+normalisation,zscore,Pabna,-0.5412990675752902,14
+normalisation,zscore,Panchagarh,-0.9664585715749013,15
+normalisation,zscore,Rajshahi,-0.32414634863635444,13
+normalisation,zscore,Rangpur,-0.32064229511821507,12
+normalisation,zscore,Sirajganj,0.49988935257922756,3
+normalisation,zscore,Thakurgaon,-1.4404098783280077,16
+normalisation,percentile_rank,Bogura,0.6432506887052342,4
+normalisation,percentile_rank,Chapainawabganj,0.5153236914600551,10
+normalisation,percentile_rank,Dinajpur,0.6139807162534435,6
+normalisation,percentile_rank,Gaibandha,0.6701101928374654,3
+normalisation,percentile_rank,Joypurhat,0.5922865013774105,7
+normalisation,percentile_rank,Kurigram,0.6294765840220385,5
+normalisation,percentile_rank,Lalmonirhat,0.556301652892562,8
+normalisation,percentile_rank,Naogaon,0.7858126721763086,1
+normalisation,percentile_rank,Natore,0.5334022038567493,9
+normalisation,percentile_rank,Nilphamari,0.40581955922865015,12
+normalisation,percentile_rank,Pabna,0.3891184573002755,13
+normalisation,percentile_rank,Panchagarh,0.2489669421487603,15
+normalisation,percentile_rank,Rajshahi,0.4066804407713498,11
+normalisation,percentile_rank,Rangpur,0.3691460055096419,14
+normalisation,percentile_rank,Sirajganj,0.7021349862258953,2
+normalisation,percentile_rank,Thakurgaon,0.13515840220385675,16
+normalisation,robust_minmax_p5_p95,Bogura,0.642375673754828,2
+normalisation,robust_minmax_p5_p95,Chapainawabganj,0.5257423001119172,9
+normalisation,robust_minmax_p5_p95,Dinajpur,0.5433277171057574,8
+normalisation,robust_minmax_p5_p95,Gaibandha,0.6382880957925824,3
+normalisation,robust_minmax_p5_p95,Joypurhat,0.6293874208444706,5
+normalisation,robust_minmax_p5_p95,Kurigram,0.5888249187001677,6
+normalisation,robust_minmax_p5_p95,Lalmonirhat,0.5480269103165543,7
+normalisation,robust_minmax_p5_p95,Naogaon,0.8214625461892463,1
+normalisation,robust_minmax_p5_p95,Natore,0.4855183322236947,10
+normalisation,robust_minmax_p5_p95,Nilphamari,0.42023052560024377,11
+normalisation,robust_minmax_p5_p95,Pabna,0.320267570735421,14
+normalisation,robust_minmax_p5_p95,Panchagarh,0.20056474118732623,15
+normalisation,robust_minmax_p5_p95,Rajshahi,0.4152450594439727,12
+normalisation,robust_minmax_p5_p95,Rangpur,0.37837425126524593,13
+normalisation,robust_minmax_p5_p95,Sirajganj,0.6326155446107253,4
+normalisation,robust_minmax_p5_p95,Thakurgaon,0.07799849798544424,16
+leave_one_year_out,without 2015,Bogura,0.6704930291137108,3
+leave_one_year_out,without 2015,Chapainawabganj,0.5732256058946009,8
+leave_one_year_out,without 2015,Dinajpur,0.5764060287395268,7
+leave_one_year_out,without 2015,Gaibandha,0.6470827738704543,4
+leave_one_year_out,without 2015,Joypurhat,0.6780478445517526,2
+leave_one_year_out,without 2015,Kurigram,0.6069347977381476,6
+leave_one_year_out,without 2015,Lalmonirhat,0.5667499424717909,9
+leave_one_year_out,without 2015,Naogaon,0.8167779905849459,1
+leave_one_year_out,without 2015,Natore,0.5361916976597456,10
+leave_one_year_out,without 2015,Nilphamari,0.44353764742284935,12
+leave_one_year_out,without 2015,Pabna,0.4008214450765709,14
+leave_one_year_out,without 2015,Panchagarh,0.2892335105824227,15
+leave_one_year_out,without 2015,Rajshahi,0.49072591987860525,11
+leave_one_year_out,without 2015,Rangpur,0.4374902814946868,13
+leave_one_year_out,without 2015,Sirajganj,0.6463175780199648,5
+leave_one_year_out,without 2015,Thakurgaon,0.17456127161537555,16
+leave_one_year_out,without 2016,Bogura,0.6736208311422599,3
+leave_one_year_out,without 2016,Chapainawabganj,0.5787362722101035,7
+leave_one_year_out,without 2016,Dinajpur,0.5759315197010269,8
+leave_one_year_out,without 2016,Gaibandha,0.6507651913416812,5
+leave_one_year_out,without 2016,Joypurhat,0.6787030074627635,2
+leave_one_year_out,without 2016,Kurigram,0.6096163694903968,6
+leave_one_year_out,without 2016,Lalmonirhat,0.5689766974807837,9
+leave_one_year_out,without 2016,Naogaon,0.819204042493656,1
+leave_one_year_out,without 2016,Natore,0.5367044244875337,10
+leave_one_year_out,without 2016,Nilphamari,0.44183450650380074,12
+leave_one_year_out,without 2016,Pabna,0.40379351864003166,14
+leave_one_year_out,without 2016,Panchagarh,0.2917753527965104,15
+leave_one_year_out,without 2016,Rajshahi,0.49296298486963186,11
+leave_one_year_out,without 2016,Rangpur,0.4387891659347815,13
+leave_one_year_out,without 2016,Sirajganj,0.656281306515697,4
+leave_one_year_out,without 2016,Thakurgaon,0.17402559941569187,16
+leave_one_year_out,without 2017,Bogura,0.6763259274683969,3
+leave_one_year_out,without 2017,Chapainawabganj,0.5724938369489057,9
+leave_one_year_out,without 2017,Dinajpur,0.5824775114471862,7
+leave_one_year_out,without 2017,Gaibandha,0.6545762166234934,5
+leave_one_year_out,without 2017,Joypurhat,0.6796041064382399,2
+leave_one_year_out,without 2017,Kurigram,0.612471173609747,6
+leave_one_year_out,without 2017,Lalmonirhat,0.5752941286706001,8
+leave_one_year_out,without 2017,Naogaon,0.8257477631512498,1
+leave_one_year_out,without 2017,Natore,0.533875847853498,10
+leave_one_year_out,without 2017,Nilphamari,0.4500114687958062,12
+leave_one_year_out,without 2017,Pabna,0.39957488640999533,14
+leave_one_year_out,without 2017,Panchagarh,0.29757347573160275,15
+leave_one_year_out,without 2017,Rajshahi,0.4911608290323004,11
+leave_one_year_out,without 2017,Rangpur,0.44198471459302136,13
+leave_one_year_out,without 2017,Sirajganj,0.6582453616574979,4
+leave_one_year_out,without 2017,Thakurgaon,0.17433942640225097,16
+leave_one_year_out,without 2018,Bogura,0.6818008729982521,3
+leave_one_year_out,without 2018,Chapainawabganj,0.5771994608555706,8
+leave_one_year_out,without 2018,Dinajpur,0.5819025663017292,7
+leave_one_year_out,without 2018,Gaibandha,0.6543288410324686,5
+leave_one_year_out,without 2018,Joypurhat,0.6894184537450566,2
+leave_one_year_out,without 2018,Kurigram,0.6096765729007801,6
+leave_one_year_out,without 2018,Lalmonirhat,0.5748316335911905,9
+leave_one_year_out,without 2018,Naogaon,0.82966352650936,1
+leave_one_year_out,without 2018,Natore,0.5388344662616584,10
+leave_one_year_out,without 2018,Nilphamari,0.4467028549086797,12
+leave_one_year_out,without 2018,Pabna,0.4078164045180605,14
+leave_one_year_out,without 2018,Panchagarh,0.3005993517219101,15
+leave_one_year_out,without 2018,Rajshahi,0.4995789028391611,11
+leave_one_year_out,without 2018,Rangpur,0.4420743481084717,13
+leave_one_year_out,without 2018,Sirajganj,0.6629277464203709,4
+leave_one_year_out,without 2018,Thakurgaon,0.1768500693680342,16
+leave_one_year_out,without 2019,Bogura,0.6693067178015992,3
+leave_one_year_out,without 2019,Chapainawabganj,0.5729960906534053,8
+leave_one_year_out,without 2019,Dinajpur,0.5731914627987149,7
+leave_one_year_out,without 2019,Gaibandha,0.646137638608079,5
+leave_one_year_out,without 2019,Joypurhat,0.6789441971328063,2
+leave_one_year_out,without 2019,Kurigram,0.6057211153153765,6
+leave_one_year_out,without 2019,Lalmonirhat,0.5721248620550828,9
+leave_one_year_out,without 2019,Naogaon,0.8177153330875322,1
+leave_one_year_out,without 2019,Natore,0.5289069203785932,10
+leave_one_year_out,without 2019,Nilphamari,0.4453140758374389,12
+leave_one_year_out,without 2019,Pabna,0.3957527231315222,14
+leave_one_year_out,without 2019,Panchagarh,0.2959864930429222,15
+leave_one_year_out,without 2019,Rajshahi,0.49002675456693134,11
+leave_one_year_out,without 2019,Rangpur,0.4395939464236295,13
+leave_one_year_out,without 2019,Sirajganj,0.6478438022115135,4
+leave_one_year_out,without 2019,Thakurgaon,0.17389252229204644,16
+leave_one_year_out,without 2020,Bogura,0.6750835414678207,3
+leave_one_year_out,without 2020,Chapainawabganj,0.5758678834974051,8
+leave_one_year_out,without 2020,Dinajpur,0.5806612647426516,7
+leave_one_year_out,without 2020,Gaibandha,0.6547800812597669,4
+leave_one_year_out,without 2020,Joypurhat,0.6835569766732977,2
+leave_one_year_out,without 2020,Kurigram,0.6090057697000446,6
+leave_one_year_out,without 2020,Lalmonirhat,0.5754754313611399,9
+leave_one_year_out,without 2020,Naogaon,0.8272629870178703,1
+leave_one_year_out,without 2020,Natore,0.5376608805893125,10
+leave_one_year_out,without 2020,Nilphamari,0.45260773613667543,12
+leave_one_year_out,without 2020,Pabna,0.40238347331396274,14
+leave_one_year_out,without 2020,Panchagarh,0.29935342365383005,15
+leave_one_year_out,without 2020,Rajshahi,0.4924184440105986,11
+leave_one_year_out,without 2020,Rangpur,0.43902721188104693,13
+leave_one_year_out,without 2020,Sirajganj,0.6532837443514633,5
+leave_one_year_out,without 2020,Thakurgaon,0.1733822655588662,16
+leave_one_year_out,without 2021,Bogura,0.6698143244421909,3
+leave_one_year_out,without 2021,Chapainawabganj,0.5694825897569038,9
+leave_one_year_out,without 2021,Dinajpur,0.5709939703626445,7
+leave_one_year_out,without 2021,Gaibandha,0.6454889695186992,4
+leave_one_year_out,without 2021,Joypurhat,0.6814307785616619,2
+leave_one_year_out,without 2021,Kurigram,0.6076437553121943,6
+leave_one_year_out,without 2021,Lalmonirhat,0.5696197136154701,8
+leave_one_year_out,without 2021,Naogaon,0.8180233847337094,1
+leave_one_year_out,without 2021,Natore,0.5290962177776136,10
+leave_one_year_out,without 2021,Nilphamari,0.4452798197821779,12
+leave_one_year_out,without 2021,Pabna,0.3939869541318024,14
+leave_one_year_out,without 2021,Panchagarh,0.29864990306218686,15
+leave_one_year_out,without 2021,Rajshahi,0.4913212844005178,11
+leave_one_year_out,without 2021,Rangpur,0.43892490914535987,13
+leave_one_year_out,without 2021,Sirajganj,0.6442260579949892,5
+leave_one_year_out,without 2021,Thakurgaon,0.17412930180033667,16
+leave_one_year_out,without 2022,Bogura,0.6788367631022327,3
+leave_one_year_out,without 2022,Chapainawabganj,0.5766471014166035,9
+leave_one_year_out,without 2022,Dinajpur,0.5831376984260085,7
+leave_one_year_out,without 2022,Gaibandha,0.6590981732621157,4
+leave_one_year_out,without 2022,Joypurhat,0.6907647731426163,2
+leave_one_year_out,without 2022,Kurigram,0.618802691463032,6
+leave_one_year_out,without 2022,Lalmonirhat,0.5825871990844937,8
+leave_one_year_out,without 2022,Naogaon,0.8259229875933164,1
+leave_one_year_out,without 2022,Natore,0.5394140963122955,10
+leave_one_year_out,without 2022,Nilphamari,0.45735087277064784,12
+leave_one_year_out,without 2022,Pabna,0.4053036507655815,14
+leave_one_year_out,without 2022,Panchagarh,0.3105700773825827,15
+leave_one_year_out,without 2022,Rajshahi,0.4987311726868702,11
+leave_one_year_out,without 2022,Rangpur,0.44987825816089266,13
+leave_one_year_out,without 2022,Sirajganj,0.6535176709801298,5
+leave_one_year_out,without 2022,Thakurgaon,0.18269582797499978,16
+leave_one_year_out,without 2023,Bogura,0.6726600026881145,3
+leave_one_year_out,without 2023,Chapainawabganj,0.5674919816753203,9
+leave_one_year_out,without 2023,Dinajpur,0.5750402136011963,7
+leave_one_year_out,without 2023,Gaibandha,0.651630681427611,5
+leave_one_year_out,without 2023,Joypurhat,0.6838266312059564,2
+leave_one_year_out,without 2023,Kurigram,0.6089243751275681,6
+leave_one_year_out,without 2023,Lalmonirhat,0.5745834331499784,8
+leave_one_year_out,without 2023,Naogaon,0.8178726045013918,1
+leave_one_year_out,without 2023,Natore,0.535334500144597,10
+leave_one_year_out,without 2023,Nilphamari,0.4481106185812632,12
+leave_one_year_out,without 2023,Pabna,0.40004822788496464,14
+leave_one_year_out,without 2023,Panchagarh,0.30252051715193734,15
+leave_one_year_out,without 2023,Rajshahi,0.49104693396902627,11
+leave_one_year_out,without 2023,Rangpur,0.4420184037217373,13
+leave_one_year_out,without 2023,Sirajganj,0.6519314006122818,4
+leave_one_year_out,without 2023,Thakurgaon,0.17559847248267624,16
+leave_one_year_out,without 2024,Bogura,0.679923456548822,3
+leave_one_year_out,without 2024,Chapainawabganj,0.5804075499593563,7
+leave_one_year_out,without 2024,Dinajpur,0.5790374071148912,8
+leave_one_year_out,without 2024,Gaibandha,0.6569347889666801,5
+leave_one_year_out,without 2024,Joypurhat,0.6910908023769677,2
+leave_one_year_out,without 2024,Kurigram,0.6101879428968741,6
+leave_one_year_out,without 2024,Lalmonirhat,0.576632847691709,9
+leave_one_year_out,without 2024,Naogaon,0.8264453085702872,1
+leave_one_year_out,without 2024,Natore,0.5467870055780135,10
+leave_one_year_out,without 2024,Nilphamari,0.4492862014491714,12
+leave_one_year_out,without 2024,Pabna,0.4097005547393172,14
+leave_one_year_out,without 2024,Panchagarh,0.3014697699030965,15
+leave_one_year_out,without 2024,Rajshahi,0.5023477823167576,11
+leave_one_year_out,without 2024,Rangpur,0.44476926100379155,13
+leave_one_year_out,without 2024,Sirajganj,0.6597154228653154,4
+leave_one_year_out,without 2024,Thakurgaon,0.17558093026835658,16
+leave_one_year_out,without 2025,Bogura,0.6727002150757955,3
+leave_one_year_out,without 2025,Chapainawabganj,0.5787787590579202,7
+leave_one_year_out,without 2025,Dinajpur,0.5786042007054468,8
+leave_one_year_out,without 2025,Gaibandha,0.6533199399195547,4
+leave_one_year_out,without 2025,Joypurhat,0.6869340957960763,2
+leave_one_year_out,without 2025,Kurigram,0.605385683412671,6
+leave_one_year_out,without 2025,Lalmonirhat,0.5749046488489997,9
+leave_one_year_out,without 2025,Naogaon,0.821704337518814,1
+leave_one_year_out,without 2025,Natore,0.5342759823408623,10
+leave_one_year_out,without 2025,Nilphamari,0.4491385391534594,12
+leave_one_year_out,without 2025,Pabna,0.3946714769646548,14
+leave_one_year_out,without 2025,Panchagarh,0.3004161095878391,15
+leave_one_year_out,without 2025,Rajshahi,0.493308332229126,11
+leave_one_year_out,without 2025,Rangpur,0.4437041877062594,13
+leave_one_year_out,without 2025,Sirajganj,0.6467627428937128,5
+leave_one_year_out,without 2025,Thakurgaon,0.16720664733053886,16

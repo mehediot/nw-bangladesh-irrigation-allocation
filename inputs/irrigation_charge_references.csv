@@ -1,0 +1,5 @@
+item,low,high,unit,discharge_low_L_per_min,discharge_high_L_per_min,period,source,note
+bmda_dtw_hourly_charge,100,115,Tk per hour,1702.2,3360,not dated in the source,"Down To Earth, 'Barind's three crop revolution' (downtoearth.org.in/news/barinds-three-crop-revolution--42375)","Tk 100 per hour for wells of 1,702.2 L/min and Tk 115 per hour for wells of 3,360 L/min; the low charge goes with the low discharge"
+bmda_dtw_hourly_charge_2020,75,125,Tk per hour,,,Dec 2020,"The Daily Observer, Rajshahi, 25 Dec 2020 (observerbd.com/news/290981)",range for BMDA electric deep tube wells; no discharge given
+boro_irrigation_cost_per_ha_2015_16,11873,20810,Tk per ha,,,Boro 2015-16,"Mainuddin et al. 2021, PLoS ONE 16(4): e0250897, doi:10.1371/journal.pone.0250897",site averages; 235 fields at six sites in the North-West region
+boro_irrigation_cost_per_ha_2016_17,5638,36634,Tk per ha,,,Boro 2016-17,"Mainuddin et al. 2021, PLoS ONE 16(4): e0250897, doi:10.1371/journal.pone.0250897",site averages; 185 fields; spread attributed to the pricing method
