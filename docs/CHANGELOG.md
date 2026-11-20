@@ -1,5 +1,10 @@
 # Change log
 
+## 1.1.0 (November 2026)
+
+- FAO-56 crop water requirement of potato: the season is now 140 days (FAO-56 Table 11 stage lengths 30/35/50/25), the potato season of Mainuddin et al. (2014, Fig. 3.1) whose planting date and crop coefficients the calculation already used; it was 115 days (25/30/30/30). Mean potato requirement 309 mm (was 214 mm), now at the lower edge of the published range 309-444 mm.
+- Outputs that use the FAO-56 requirement change accordingly (14 of 91 reference tables): the FAO-56 sensitivity case (smallest fallow at budget 0.80 18.2%, was 17.4%; districts that cannot keep all Boro 4/10/14 at 0.90/0.80/0.70, were 5/12/14), the relative scarcity index (Gaibandha and Sirajganj, Lalmonirhat and Chapainawabganj swap ranks; Spearman with the Boro share 0.60, was 0.62) and the FAO-56 bar of the sensitivity tornado. The allocation model with the published NIR, the forecasts and every other result are unchanged.
+
 ## 1.0.1 (November 2026)
 
 Presentation changes only; all 91 output tables are unchanged in content.

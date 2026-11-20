@@ -40,7 +40,7 @@
   "inputs/nasa_power_daily/DAILY_Rangpur.csv": "029652ca840dabfc4de41fad0aa97cf328c04a32b624040f9bee9ed734e9825b",
   "inputs/nasa_power_daily/DAILY_Sirajganj.csv": "ff36426cb956f10d7f4d72209073da69535cb96636e473ecf93fb0df3fcaff1b",
   "inputs/nasa_power_daily/DAILY_Thakurgaon.csv": "399ac6793ff6748062bc092d528866dd0917e3048fb02c8e7c51fd65a7a7cc51",
-  "scripts/01_climate.py": "460e85b5e5d105b46b667630b1682e278fa5198762e4321a10616564aac6db92",
+  "scripts/01_climate.py": "1e4c02d54e38fef5c21cdb9b4d8cfdc00a61b4ca686d5e10283a733b814e906b",
   "scripts/02_scarcity_index.py": "f9655625b5a369d73c316ab4e0cc34f63a6b1a7ffdf2b80a3a53dda25b049fcb",
   "scripts/03_hindcast_models.py": "243c77a79add4e602e83e4916eb4d1ea7f1d14f24df179e0e4a7ca190dd78994",
   "scripts/04_forecasts.py": "e76fed68bb063f8a08ac690eceb5195cace9c1f3a22bd01700db0711692ed9fa",

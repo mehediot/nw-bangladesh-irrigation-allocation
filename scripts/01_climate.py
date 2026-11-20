@@ -181,9 +181,9 @@ CROP_CAL = (
         ),
         "Potato": (
             (10, 30),
-            (25, 30, 30, 30),
+            (30, 35, 50, 25),
             (0.60, 1.15, 0.80),
-            "Potato, Jan/Nov, (semi-)arid: 25/30/30/30",
+            "Potato, Dec, Calif. desert: 30/35/50/25 (140 days, the potato season of Mainuddin et al. 2014, Fig. 3.1)",
         ),
         "Maize": ((12, 1), (25, 40, 45, 30), (0.40, 1.20, 0.60), "Maize (grain), Dec/Jan, arid: 25/40/45/30"),
     }
