@@ -1349,117 +1349,104 @@ def fig7():
 
 
 def fig8():
-    """Fig. 8 - sensitivity tornado."""
+    """Fig. 8 - one-at-a-time sensitivity, as a grid of ranges grouped by kind of input."""
     tor = pd.read_csv(X / "ext_28_sensitivity_tornado.csv")
     OUTC = [
-        ("min_fallow_pct", "Smallest fallow (pp)"),
-        ("food_energy_trillion_kcal", "Food energy, food plan (%)"),
-        ("gross_margin_billion_Tk", "Net return, net-return plan (%)"),
+        ("min_fallow_pct", "Smallest fallow", "percentage points", "{:.1f}% of land"),
+        ("food_energy_trillion_kcal", "Food energy, food-energy plan", "% change", "{:.1f} trillion kcal"),
+        ("gross_margin_billion_Tk", "Net return, net-return plan", "% change", "Tk {:.1f} billion"),
     ]
-    gmw = tor[tor.outcome == "gross_margin_billion_Tk"].set_index("factor")
-    inputs = (
-        gmw[gmw.group == "input"]
-        .assign(sw=lambda t: t[["low_change", "high_change"]].abs().max(axis=1))
-        .sort_values("sw")
-        .index.tolist()
-    )
-    levers = gmw[gmw.group == "lever"].index.tolist()[::-1]
-    order = levers + inputs  # bottom to top
-    yy = {f: i + (1.0 if f in inputs else 0) for i, f in enumerate(order)}
-    fig, axes = plt.subplots(
-        1,
-        3,
-        figsize=(W, 3.5),
-        sharey=True,
-        gridspec_kw=dict(wspace=0.12, left=0.30, right=0.985, bottom=0.13, top=0.86),
-    )
-    for ax, (oc, olab) in zip(axes, OUTC):
+    GROUPS = [
+        ("Water, land and policy", "#2a78d6", [
+            ("Boro floor: 0.75 / 0.85 of baseline", "Boro floor 0.75 / 0.85"),
+            ("Water coefficients: FAO-56, single years 2015-2025", "FAO-56 requirement, single years"),
+            ("Crop limits: 1.5 x baseline area", "Crop limits 1.5× baseline area"),
+        ]),
+        ("Yields", "#6250d6", [
+            ("Yields: persistence, climatology, observed, hindcast", "Four yield sources"),
+        ]),
+        ("Prices and costs", "#c2410c", [
+            ("Potato price: low / high", "Potato price low / high"),
+            ("Boro and wheat at procurement price", "Boro and wheat at procurement price"),
+            ("Maize price: low / high", "Maize price low / high"),
+            ("Maize cost: -20% / +20%", "Maize cost −20% / +20%"),
+            ("Wheat cost: -20% / +20%", "Wheat cost −20% / +20%"),
+        ]),
+        ("Management option (not an uncertainty)", "#0d366b", [
+            ("AWD on half the Boro area, 15-30% saving", "AWD on half the Boro area"),
+            ("AWD on all Boro area, 15-30% saving", "AWD on all the Boro area"),
+        ]),
+    ]
+    known = {f for _, _, rows in GROUPS for f, _ in rows}
+    assert known == set(tor.factor), set(tor.factor) ^ known
+    # rows top to bottom, with a header row for each group
+    layout, y = [], 0.0
+    for g, col, rows in GROUPS:
+        layout.append(("head", g, col, y)); y += 1.0
+        for f, lab in rows:
+            layout.append(("row", f, lab, col, y)); y += 1.0
+        y += 0.35
+    ymax = y - 0.35
+    fig, axes = plt.subplots(1, 3, figsize=(W, 4.3), sharey=True,
+                             gridspec_kw=dict(wspace=0.10, left=0.27, right=0.985, bottom=0.10, top=0.84))
+    for k, (ax, (oc, olab, unit, mfmt)) in enumerate(zip(axes, OUTC)):
         t = tor[tor.outcome == oc].set_index("factor")
-        for f in order:
-            r = t.loc[f]
-            lo, hi = (
-                (min(r.low_change, 0), max(r.low_change, 0))
-                if r.settings == 1
-                else (r.low_change, r.high_change)
-            )
-            lever = r.group == "lever"
-            if abs(hi - lo) < 1e-9 and abs(lo) < 1e-9:
-                ax.plot(0, yy[f], "|", color=MUTED, ms=5)
+        span = max(t[["low_change", "high_change"]].abs().max().max(), 1e-9)
+        ax.set_xlim(-1.18 * span, 1.18 * span)
+        for item in layout:
+            if item[0] == "head":
                 continue
-            ax.barh(
-                yy[f],
-                hi - lo,
-                left=lo,
-                height=0.62,
-                color=BLUES[5] if lever else BLUES[1],
-                edgecolor=BLUES[6] if lever else BLUES[3],
-                lw=0.5,
-                hatch="////" if lever else "",
-            )
-            if r.settings > 1 and (lo > 0 or hi < 0):  # range away from zero: thin line back to the main case
-                ax.hlines(yy[f], min(0, lo), max(0, hi), color=MUTED, lw=0.5, ls=(0, (1, 1)))
-        ax.axvline(0, color=INK, lw=0.7)
+            _, f, lab, col, yy = item
+            r = t.loc[f]
+            lo, hi = sorted((r.low_change, r.high_change))
+            if r.settings == 1:
+                lo, hi = sorted((0.0, r.low_change))
+            if abs(lo) < 1e-9 and abs(hi) < 1e-9:
+                ax.plot(0, yy, "o", ms=2.6, color=LIGHT, zorder=3)
+                continue
+            if r.settings == 1:  # one alternative: a thin stem from the main case to its value
+                ax.hlines(yy, lo, hi, color=col, lw=1.0, zorder=2)
+                v = r.low_change
+                ax.plot(v, yy, "o", ms=5.2, color=col, mec="white", mew=0.6, zorder=4)
+                ends = [v]
+            else:
+                if lo > 0 or hi < 0:  # range away from zero: dotted link back to the main case
+                    ax.hlines(yy, min(0, lo), max(0, hi), color=MUTED, lw=0.5, ls=(0, (1, 1.5)), zorder=1)
+                ax.hlines(yy, lo, hi, color=col, lw=4.2, alpha=0.9, zorder=2, capstyle="round")
+                ends = [lo, hi]
+            if hi - lo >= 0.12 * span or r.settings == 1:
+                txt = " / ".join(fmt_minus(e, 1 if abs(e) < 10 else 0).replace("-", "−") if e < 0 else
+                                 ("+" + (f"{e:.1f}" if abs(e) < 10 else f"{e:.0f}")) for e in ends)
+                xc = ends[0] if len(ends) == 1 else (lo + hi) / 2
+                xc = max(min(xc, 0.82 * span), -0.82 * span)
+                ax.text(xc, yy - 0.42, txt, ha="center", va="center", fontsize=MIN_PT, color=INK, zorder=5,
+                        bbox=dict(boxstyle="square,pad=0.02", fc="white", ec="none"))
+        for item in layout:
+            if item[0] == "head":
+                ax.axhline(item[3] - 0.55, color=GRID, lw=0.6, zorder=0)
+        ax.axvline(0, color=INK, lw=0.7, zorder=1)
         ax.xaxis.grid(True)
         ax.set_axisbelow(True)
+        ax.tick_params(axis="y", length=0)
+        ax.set_xlabel(unit, fontsize=6.8, labelpad=2)
         m = t.iloc[0].main_value
-        ax.set_title(
-            olab
-            + "\nmain case: "
-            + (
-                f"{m:.1f}% of land"
-                if oc == "min_fallow_pct"
-                else f"{m:.1f} trillion kcal" if "food" in oc else f"{m:.1f} billion Tk"
-            ),
-            fontsize=7,
-            loc="left",
-            pad=4,
-        )
-    nice = (
-        lambda f: f.replace("15-30%", "15–30%")
-        .replace("-20% / +20%", "−20% / +20%")
-        .replace("2015-2025", "2015–2025")
-        .replace("1.5 x", "1.5×")
-    )
-    axes[0].set_yticks([yy[f] for f in order])
-    axes[0].set_yticklabels([nice(f) for f in order], fontsize=6.4)
-    axes[0].tick_params(axis="y", length=0)
-    for ax in axes:
-        ax.axhline(len(levers), color=MUTED, lw=0.6, ls=(0, (4, 2)))
+        ax.set_title(f"{olab}\nmain case {mfmt.format(m)}", fontsize=7, loc="left", pad=4)
+    rows = [it for it in layout if it[0] == "row"]
+    axes[0].set_yticks([it[4] for it in rows])
+    axes[0].set_yticklabels([it[2] for it in rows], fontsize=MIN_PT)
     from matplotlib.transforms import blended_transform_factory as _btf
-
-    _tr = _btf(axes[0].transAxes, axes[0].transData)
-    axes[0].text(
-        -0.02,
-        len(levers) + 0.42,
-        "Uncertain inputs",
-        transform=_tr,
-        ha="right",
-        va="center",
-        fontsize=6.6,
-        color=MUTED,
-        style="italic",
-    )
-    axes[0].text(
-        -0.02,
-        len(levers) - 0.42,
-        "Management option",
-        transform=_tr,
-        ha="right",
-        va="center",
-        fontsize=6.6,
-        color=BLUES[6],
-        style="italic",
-    )
+    tr = _btf(fig.transFigure, axes[0].transData)
+    for it in layout:
+        if it[0] == "head":
+            axes[0].text(0.012, it[3], it[1], transform=tr, ha="left", va="center", fontsize=6.8,
+                         fontweight="bold", color=it[2])
     for ax in axes:
-        ax.set_ylim(-0.6, len(order) + 0.6)
-    fig.suptitle(
-        "One factor at a time, budget 0.80: change from the main case",
-        x=0.30,
-        ha="left",
-        fontsize=8,
-        fontweight="bold",
-        y=0.985,
-    )
+        ax.set_ylim(ymax - 0.4, -0.7)
+    fig.suptitle("Budget 0.80: water, land and policy settings move the fallow; prices move only the net return",
+                 x=0.012, ha="left", fontsize=8, fontweight="bold", y=0.985)
+    fig.text(0.012, 0.925, "Change from the main case when one input takes its alternative values. "
+             "Bars span the range over the alternatives; a dot is a single alternative; a grey dot means no change.",
+             fontsize=MIN_PT, color=MUTED, ha="left")
     save(fig, "Fig8_sensitivity")
 
 

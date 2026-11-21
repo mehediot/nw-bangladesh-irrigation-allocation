@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this code or data, please cite it as below."
 title: "Code and data for: An Explainable Machine Learning and Optimization Framework for Irrigation-Constrained Multi-Crop Decision Support in Northwest Bangladesh"
 type: software
-version: "1.1.0"
+version: "1.1.1"
 license: MIT
 repository-code: "https://github.com/mehediot/nw-bangladesh-irrigation-allocation"
 authors:

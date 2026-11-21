@@ -1,5 +1,9 @@
 # Change log
 
+## 1.1.1 (November 2026)
+
+- Fig. 8 redrawn: inputs grouped by kind (water, land and policy; yields; prices and costs; management option), one range per input and outcome, single alternatives as dots and "no change" as grey dots, value labels on each range. Same data (ext_28_sensitivity_tornado.csv); no table changes.
+
 ## 1.1.0 (November 2026)
 
 - FAO-56 crop water requirement of potato: the season is now 140 days (FAO-56 Table 11 stage lengths 30/35/50/25), the potato season of Mainuddin et al. (2014, Fig. 3.1) whose planting date and crop coefficients the calculation already used; it was 115 days (25/30/30/30). Mean potato requirement 309 mm (was 214 mm), now at the lower edge of the published range 309-444 mm.
