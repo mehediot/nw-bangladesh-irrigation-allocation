@@ -778,7 +778,7 @@ def fig2():
     a.set_xlim(-0.35, 4.35)
     note(174.9, y0 + 11.8, "Γ = 0 … 4", size=5.5, ha="center")
     ax.text(
-        166.9, y0 + 19.2, "budget needed", rotation=90, ha="center", va="center", fontsize=5.5, color=MUTED
+        166.9, y0 + 18.4, "budget", rotation=90, ha="center", va="center", fontsize=6, color=MUTED
     )
 
     # ---- row 5: decision support ------------------------------------------------------------------
@@ -1233,7 +1233,7 @@ def fig6():
     h = awdc[np.isclose(awdc.water_saving, 0.2) & np.isclose(awdc.budget_ratio, 0.8) & np.isclose(awdc.adoption_share, 0.5)]
     hv = float(h.min_fallow_pct.iloc[0])
     ax.plot([0.5], [hv], "o", ms=6.5, mfc="none", mec=INK, mew=0.9, zorder=5,
-            label=f"half the area, 20% saving:\nfallow {hv:.1f}% (half)")
+            label=f"AWD on half the Boro area,\n20% saving: fallow {hv:.1f}%")
     ax.legend(title="Water saved by AWD", title_fontsize=6.5, loc="upper right", handlelength=1.8, fontsize=MIN_PT)
     panel(ax, "a", "AWD shrinks the fallow at budget 0.80")
     y = np.arange(len(wv))
@@ -1250,7 +1250,7 @@ def fig6():
              fontsize=MIN_PT, color=BLUES[5])
     ax2.text(np.sqrt(1.15 * ch), len(wv) - 0.2, f"surveyed\nirrigation\ncost, at most\nTk {cl:.2f}–{ch:.2f}",
              ha="center", va="top", fontsize=MIN_PT, color=MUTED)
-    ax2.hlines(y, bh, wv.water_value_per_1000_m3, color=LIGHT, lw=0.8, zorder=1)
+    ax2.hlines(y, ch, wv.water_value_per_1000_m3, color=LIGHT, lw=0.8, zorder=1)  # from the top of the surveyed cost; keeps the band labels clear
     ax2.plot(wv.water_value_per_1000_m3, y, "o", ms=4.3, color=BLUES[5], mec="white", mew=0.5, zorder=3)
     for yy_, v in zip(y, wv.water_value_per_1000_m3):
         ax2.text(v * 1.12, yy_, f"{v:.0f}", va="center", ha="left", fontsize=MIN_PT, color=INK)
