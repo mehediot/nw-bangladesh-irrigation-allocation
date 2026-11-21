@@ -869,8 +869,8 @@ def fig3():
     ax = fig.add_subplot(gs[0])
     yy = np.arange(len(e6))
     for rho in (0.7, 0.8, 0.9):
-        ax.axvline(rho, color=MUTED, lw=0.7, ls=(0, (4, 2)))
-        ax.text(rho, len(e6) - 0.35, f"budget {rho:.2f}", ha="center", va="bottom", fontsize=6.3, color=MUTED)
+        ax.vlines(rho, -0.7, len(e6) - 0.5, color=MUTED, lw=0.7, ls=(0, (4, 2)))  # stops below its label
+        ax.text(rho, len(e6) - 0.4, f"budget {rho:.2f}", ha="center", va="bottom", fontsize=MIN_PT, color=MUTED)
     ax.hlines(yy, e6.boro_share_PM_2023_2025, e6.boro_share_fixed_NIR, color=LIGHT, lw=1.6, zorder=1)
     ax.plot(
         e6.boro_share_fixed_NIR,
@@ -902,7 +902,7 @@ def fig3():
     ax.xaxis.grid(True)
     ax.set_axisbelow(True)
     ax.set_xlabel("Boro share of the district's modelled irrigation demand")
-    ax.legend(loc="lower right", handletextpad=0.3, fontsize=6.4)
+    ax.legend(loc="upper left", bbox_to_anchor=(0.0, 0.92), handletextpad=0.3, fontsize=MIN_PT)  # empty corner, clear of the budget lines
     panel(ax, "a", "Full retention fails where share > budget")
     ax = fig.add_subplot(gs[1])
     RHO = [1.0, 0.95, 0.9, 0.85, 0.8, 0.75, 0.7, 0.65, 0.6]
