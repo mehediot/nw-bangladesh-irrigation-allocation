@@ -69,6 +69,7 @@ MODEL_COL = {"Elastic Net": "#6250d6", "Persistence": "#eda100", "Climatology": 
 MODEL_HATCH = {"Elastic Net": "", "Persistence": "////", "Climatology": "...."}
 BLUES = ["#cde2fb", "#9ec5f4", "#6da7ec", "#3987e5", "#256abf", "#104281", "#0d366b"]
 SEQ = LinearSegmentedColormap.from_list("blue_seq", BLUES)
+PURPLES = LinearSegmentedColormap.from_list("purple_seq", ["#efedfb", "#c9c2f2", "#9b8fe6", "#6250d6", "#3b2d8f"])
 W = 7.48  # inches = 190 mm
 
 plt.rcParams.update(
@@ -227,7 +228,7 @@ def fig1():
     other_share = 100 * (base_area["Wheat"] + base_area["Potato"]) / base_area.sum(axis=1)
     fig = plt.figure(figsize=(W, 6.3))
     axb = fig.add_axes([0.055, 0.10, 0.46, 0.84])
-    norm = Normalize(0.65, 1.0)
+    norm = Normalize(0.5, 1.0)  # Boro share runs from 0.53 (Panchagarh) to 0.93
     choropleth(axb, share, SEQ, norm, extent=(87.42, X1, Y0, Y1))
     axb.set_xticks([88.0, 88.5, 89.0, 89.5, 90.0])
     axb.set_xticklabels([f"{v:.1f}°E" for v in axb.get_xticks()])
@@ -240,11 +241,11 @@ def fig1():
             axb.plot(
                 [cen[a][0], cen[b][0]],
                 [cen[a][1], cen[b][1]],
-                color=INK,
-                lw=1.0,
+                color=MUTED,
+                lw=0.8,
                 ls=(0, (3, 2)),
                 marker="o",
-                ms=2.5,
+                ms=2.2,
                 zorder=4,
             )
     for d in sorted(study):
@@ -314,12 +315,12 @@ def fig1():
     cb.ax.tick_params(length=2, labelsize=6.5)
     cb.set_label("Boro share of modelled irrigation demand", fontsize=6.8, labelpad=2)
     axb.plot(
-        [], [], color=INK, lw=1.0, ls=(0, (3, 2)), marker="o", ms=2.5, label="Same NASA POWER climate series"
+        [], [], color=MUTED, lw=0.8, ls=(0, (3, 2)), marker="o", ms=2.2, label="Same NASA POWER climate series"
     )
     axb.legend(loc="upper left", bbox_to_anchor=(-0.02, 1.0), fontsize=6.3, handlelength=2.6)
     panel(axb, "a", "Study districts and Boro dependence")
     spec = [
-        ("b", t3m.RAWSI, ORANGES, 0.1, 0.8, "RAWSI scarcity index", "relative score (0–1)", "{:.2f}"),
+        ("b", t3m.RAWSI, ORANGES, 0.15, 0.85, "RAWSI scarcity index", "relative score (0–1)", "{:.2f}"),
         (
             "c",
             t3m.groundwater_component,
@@ -340,7 +341,7 @@ def fig1():
             "mm, 2023–2025 mean",
             "{:.0f}",
         ),
-        ("e", other_share, SEQ, 0, 40, "Wheat + potato share of area", "% of three-crop area", "{:.0f}"),
+        ("e", other_share, PURPLES, 0, 55, "Wheat + potato share of area", "% of three-crop area", "{:.0f}"),
     ]
     for k, (letter, vals, cmap, vmin, vmax, title, label, fmt) in enumerate(spec):
         ax = fig.add_axes([0.555 + 0.225 * (k % 2), 0.575 - 0.495 * (k // 2), 0.215, 0.375])
@@ -661,9 +662,12 @@ def fig2():
         ax.text(146.1, yy, lab, ha="center", va="center", fontsize=5.8)
     note(146.1, y0 + 11.0, "scaled 0–1, averaged", size=5.8, ha="center")
     note(146.1, y0 + 7.6, "20 alternative constructions", size=5.8, ha="center")
+    ax.plot([160.2, 160.2], [y1 - 13.2, y1 - 23.8], color=NAVY, lw=0.8, solid_capstyle="butt")
+    for k_ in range(3):
+        ax.plot([159.8, 160.2], [y1 - 13.2 - k_ * 5.3] * 2, color=NAVY, lw=0.8)
     ax.add_patch(
         FancyArrowPatch(
-            (160.6, y1 - 18.5),
+            (160.2, y1 - 18.5),
             (164, y1 - 18.5),
             arrowstyle="-|>",
             mutation_scale=6,
@@ -675,7 +679,7 @@ def fig2():
     )
     a = ax.inset_axes([164.6, y0 + 3.4, 22.2, 28.2], transform=ax.transData)
     a.axis("off")
-    nrm = Normalize(0.1, 0.8)
+    nrm = Normalize(0.15, 0.85)
     for name in sorted(study):  # fixed order: a set's order changes between runs and moved edge pixels
         a.add_collection(
             PolyCollection(
@@ -754,7 +758,7 @@ def fig2():
     note(
         132.4,
         y1 - 15.8,
-        "The plan must fit the budget\nin every such case, keeps\nthe land balance, and\nmaximises food energy",
+        "Finds the smallest budget\nat which a plan fits every\nsuch case and still holds\na set share of food energy",
         size=5.8,
     )
     note(132.4, y0 + 8.4, "Result: the budget that holds\n80% or 90% of food energy", size=5.8)
@@ -905,7 +909,9 @@ def fig3():
     loss = np.array([[100 * max(0.0, 1 - r / e6.boro_share_fixed_NIR[d]) for r in RHO] for d in e6.index])[
         ::-1
     ]
-    im = ax.imshow(loss, cmap=ORANGES, vmin=0, vmax=40, aspect="auto")
+    cm_ = ORANGES.copy()
+    cm_.set_bad("#f3f2ee")
+    im = ax.imshow(np.ma.masked_where(loss <= 0, loss), cmap=cm_, vmin=0, vmax=40, aspect="auto")
     for i in range(loss.shape[0]):
         for k in range(loss.shape[1]):
             if loss[i, k] > 0:
@@ -915,7 +921,7 @@ def fig3():
                     f"{loss[i, k]:.0f}" if loss[i, k] >= 0.5 else "<1",
                     ha="center",
                     va="center",
-                    fontsize=5.8,
+                    fontsize=MIN_PT,
                     color="white" if loss[i, k] > 22 else INK,
                 )
     ax.set_xticks(range(len(RHO)))
@@ -945,12 +951,12 @@ def fig4():
     rs = pd.read_csv(X / "ext_16_budget_response.csv")
     fr = pd.read_csv(X / "ext_17_energy_margin_frontier.csv")
     FALLOW_COL = "#d9d7d0"
-    fig = plt.figure(figsize=(W, 5.8))
+    fig = plt.figure(figsize=(W, 5.4))
     gs = fig.add_gridspec(
         2,
         3,
-        height_ratios=[1, 1.05],
-        hspace=0.52,
+        height_ratios=[0.95, 1.05],
+        hspace=0.46,
         wspace=0.38,
         left=0.17,
         right=0.985,
@@ -959,11 +965,14 @@ def fig4():
     )
     ax = fig.add_subplot(gs[0, :])
     OBJ = [
-        ("free", "food_energy", "Food energy"),
+        ("free", "food_energy", "Food energy, free fallow"),
         ("free", "gross_margin_potato_mid", "Net return, free fallow"),
         ("least", "gross_margin_potato_mid", "Net return, least fallow"),
     ]
     rows = [(rho, p_, o, lab) for rho in (0.8, 1.0) for p_, o, lab in OBJ]
+    # at budget 0.80 the least-fallow plan is the same under both objectives (Table 3)
+    rows = [(rho, p_, o, "Least fallow, either objective" if (rho == 0.8 and p_ == "least") else lab)
+            for rho, p_, o, lab in rows]
     yy = [5.4, 4.4, 3.4, 1.8, 0.8, -0.2]
     for y, (rho, p_, o, lab) in zip(yy, rows):
         r = gm[np.isclose(gm.budget_ratio, rho) & (gm.plan == p_) & (gm.objective == o)].iloc[0]
@@ -1012,14 +1021,14 @@ def fig4():
     ax.legend(loc="upper right", ncol=5, bbox_to_anchor=(1.0, 1.17), handlelength=1.4, columnspacing=1.2)
     panel(ax, "a", "Land use of each plan (80% Boro floor)")
     STY = {
-        ("free", "food_energy"): ("Food energy", "#8a8984", (0, (4, 2)), "s"),
-        ("free", "gross_margin"): ("Net return, free fallow", BLUES[4], "-", "^"),
-        ("least", "gross_margin"): ("Net return, least fallow", BLUES[6], (0, (1, 1.2)), "o"),
+        ("free", "food_energy"): ("Food energy, free fallow", INK, "-", "s"),
+        ("free", "gross_margin"): ("Net return, free fallow", BLUES[3], "-", "^"),
+        ("least", "gross_margin"): ("Net return, least fallow", BLUES[3], (0, (1.2, 1.2)), "o"),
     }
     for j, (col, yl, title) in enumerate(
         [
-            ("fallow_pct_of_land", "Fallow (% of land)", "Fallow vs budget"),
-            ("food_energy_trillion_kcal", "Food energy (trillion kcal)", "Food energy vs budget"),
+            ("fallow_pct_of_land", "Fallow (% of land)", "Fallow rises fast below 0.90"),
+            ("food_energy_trillion_kcal", "Food energy (trillion kcal)", "Food energy falls with it"),
         ]
     ):
         ax = fig.add_subplot(gs[1, j])
@@ -1032,19 +1041,21 @@ def fig4():
                 lw=1.5,
                 ls=ls,
                 marker=mk,
-                ms=3,
-                markevery=2,
+                ms=3.2,
                 mec="white",
-                mew=0.3,
+                mew=0.4,
                 label=lab,
+                zorder=3 if o == "food_energy" else 2,
             )
+        ax.axvline(0.8, color=MUTED, lw=0.6, ls=(0, (3, 2)), zorder=1)
         ax.set_xlabel("Budget ratio")
         ax.set_ylabel(yl)
         ax.grid(True)
         ax.set_axisbelow(True)
         ax.set_xticks([0.8, 0.85, 0.9, 0.95, 1.0])
         if j == 0:
-            ax.legend(loc="upper right", handlelength=2.6, fontsize=6.1)
+            ax.legend(loc="upper right", handlelength=2.6, fontsize=6.5, frameon=True, facecolor="white",
+                      edgecolor="none", framealpha=0.9)
         panel(ax, "bc"[j], title)
     ax = fig.add_subplot(gs[1, 2])
     for p_, colr, mk, lab in [
@@ -1067,12 +1078,24 @@ def fig4():
             mew=0.4,
             label=lab,
         )
+    g = (fr[np.isclose(fr.budget_ratio, 0.8) & (fr.plan == "free")]
+         .drop_duplicates(["gross_margin_billion_Tk", "food_energy_trillion_kcal"])
+         .sort_values("gross_margin_billion_Tk"))
+    a0, a1 = g.iloc[0], g.iloc[-1]
+    ax.annotate("food-energy\nplan", (a0.gross_margin_billion_Tk, a0.food_energy_trillion_kcal),
+                xytext=(0, -6), va="top", textcoords="offset points", fontsize=6.5, color=BLUES[5])
+    ax.annotate("net-return plan", (a1.gross_margin_billion_Tk, a1.food_energy_trillion_kcal),
+                xytext=(-6, 9), textcoords="offset points", ha="right", va="bottom", fontsize=6.5, color=BLUES[5])
+    lf = fr[np.isclose(fr.budget_ratio, 0.8) & (fr.plan == "least")].iloc[0]
+    ax.annotate("least fallow", (lf.gross_margin_billion_Tk, lf.food_energy_trillion_kcal),
+                xytext=(6, 0), textcoords="offset points", fontsize=6.5, color=BLUES[6], va="center")
+    ax.text(0.04, 0.26, "line: free-fallow plans\nwith mixed objectives", transform=ax.transAxes,
+            ha="left", va="bottom", fontsize=6.5, color=MUTED)
     ax.set_xlabel("Net return (bn Tk)")
     ax.set_ylabel("Food energy (trillion kcal)")
     ax.grid(True)
     ax.set_axisbelow(True)
-    ax.legend(loc="lower left", fontsize=6.2, handlelength=1.6)
-    panel(ax, "d", "Energy\u2013net-return frontier, budget 0.80")
+    panel(ax, "d", "Trade-off at budget 0.80")
     save(fig, "Fig4_plans")
 
 
@@ -1084,12 +1107,12 @@ def fig5():
     fig, axes = plt.subplots(
         1,
         2,
-        figsize=(W, 3.15),
+        figsize=(W, 3.35),
         sharey=True,
-        gridspec_kw=dict(wspace=0.1, left=0.075, right=0.99, bottom=0.25, top=0.88),
+        gridspec_kw=dict(wspace=0.1, left=0.075, right=0.94, bottom=0.235, top=0.83),
     )
     SETSTY = [
-        ("temporal_cv", "Temporal NIR deviation (year-to-year CV)", BLUES[3], "o", -0.09),
+        ("temporal_cv", "Temporal NIR deviation (year-to-year CV)", "#d9622b", "o", -0.09),
         ("spatial_upper", "Spatial upper NIR (range across districts)", BLUES[6], "s", 0.09),
     ]
     for ax, tg in zip(axes, (80, 90)):
@@ -1109,20 +1132,33 @@ def fig5():
                 f"{worst.iloc[-1]:.3f}",
                 ha="left",
                 va="center",
-                fontsize=6.2,
+                fontsize=MIN_PT,
                 color=INK,
             )
         ax.axhline(0.8, color=MUTED, lw=0.7, ls=(0, (4, 2)))
-        ax.text(4.65, 0.797, "budget 0.80", ha="right", va="top", fontsize=6.2, color=MUTED)
+        ax.text(4.65, 0.797, "budget 0.80 (a 20% cut)", ha="right", va="top", fontsize=MIN_PT, color=MUTED)
         ax.axhline(1.0, color=MUTED, lw=0.7, ls=(0, (1, 1.5)))
-        ax.text(-0.25, 1.003, "baseline demand", ha="left", va="bottom", fontsize=6.2, color=MUTED)
+        if tg == 80:
+            ax.text(-0.25, 0.997, "baseline demand (no cut)", ha="left", va="top", fontsize=MIN_PT, color=MUTED)
         ax.set_xticks(range(5))
         ax.set_xticklabels([f"Γ = {k}" for k in range(5)])
         ax.set_xlim(-0.35, 4.7)
         ax.set_xlabel("Crops whose NIR may take its high value")
         ax.yaxis.grid(True)
         ax.set_axisbelow(True)
-        panel(ax, "ab"[tg == 90], f"Budget needed to hold {tg}% of food energy")
+        panel(ax, "ab"[tg == 90], f"Holding {tg}% of the food energy of the baseline areas")
+        if tg == 90:
+            sec = ax.secondary_yaxis("right", functions=(lambda r: 100 * (1 - r), lambda c: 1 - c / 100))
+            sec.set_yticks([0, 5, 10, 15, 20])
+            sec.set_yticklabels(["0%", "5%", "10%", "15%", "20%"])
+            sec.tick_params(length=2, labelsize=MIN_PT)
+            sec.set_ylabel("Cut in the budget", fontsize=6.8)
+    sp = t6[(t6.uncertainty_set == "spatial_upper") & (t6.gamma == 1)].iloc[0]
+    n_inf = 48 - int(sp["feasible_cases_of_48_at_budget_0.80"])
+    axes[0].annotate(f"spatial set: {n_inf} of 48 cases cannot\nkeep 80% of their Boro at 0.80",
+                     xy=(1.09, float(sp.budget_needed_to_hold_80pct_worst_case)), xytext=(1.45, 0.965),
+                     fontsize=MIN_PT, color=BLUES[6], ha="left", va="center",
+                     arrowprops=dict(arrowstyle="-", color=BLUES[6], lw=0.6))
     top = max(t6[f"budget_needed_to_hold_{tg}pct_worst_case"].max() for tg in (80, 90))
     axes[0].set_ylabel("Budget ratio needed (48 district-years)")
     axes[0].set_ylim(0.76, max(1.01, top + 0.02))
@@ -1135,10 +1171,13 @@ def fig5():
         loc="lower center",
         bbox_to_anchor=(0.53, 0.0),
         ncol=4,
-        fontsize=6.2,
+        fontsize=MIN_PT,
         handlelength=1.6,
         columnspacing=1.6,
     )  # below the panels: clear of the reference lines
+    fig.suptitle("Uncertain crop water needs shrink the safe cut: 7–10% with the spatial set, "
+                 "13–16% with the temporal set (worst cases, Γ = 1–4)", x=0.075, ha="left", fontsize=8,
+                 fontweight="bold", y=0.985)
     save(fig, "Fig5_robust_budgets")
 
 
@@ -1154,8 +1193,8 @@ def fig6():
     fig, (ax, ax2) = plt.subplots(
         1,
         2,
-        figsize=(W, 2.95),
-        gridspec_kw=dict(wspace=0.3, left=0.07, right=0.985, bottom=0.25, top=0.88, width_ratios=[1, 1.15]),
+        figsize=(W, 3.4),
+        gridspec_kw=dict(wspace=0.42, left=0.07, right=0.985, bottom=0.13, top=0.9, width_ratios=[1, 1.05]),
     )
     SAV = sorted(awdc.water_saving.unique())
     for k, sv in enumerate(SAV):
@@ -1179,7 +1218,7 @@ def fig6():
         f"conventional\nirrigation: {g0:.1f}%",
         xy=(0, g0),
         xytext=(0.1, g0 + 0.5),
-        fontsize=6.3,
+        fontsize=MIN_PT,
         color=MUTED,
         va="bottom",
     )
@@ -1191,54 +1230,45 @@ def fig6():
     ax.set_ylabel("Smallest fallow share (% of land pool)")
     ax.yaxis.grid(True)
     ax.set_axisbelow(True)
-    panel(ax, "a", "AWD and the fallow needed, budget 0.80")
-    x = np.arange(len(wv))
+    h = awdc[np.isclose(awdc.water_saving, 0.2) & np.isclose(awdc.budget_ratio, 0.8) & np.isclose(awdc.adoption_share, 0.5)]
+    hv = float(h.min_fallow_pct.iloc[0])
+    ax.plot([0.5], [hv], "o", ms=6.5, mfc="none", mec=INK, mew=0.9, zorder=5,
+            label=f"half the area, 20% saving:\nfallow {hv:.1f}% (half)")
+    ax.legend(title="Water saved by AWD", title_fontsize=6.5, loc="upper right", handlelength=1.8, fontsize=MIN_PT)
+    panel(ax, "a", "AWD shrinks the fallow at budget 0.80")
+    y = np.arange(len(wv))
     bands = [
-        ("bmda_dtw_hourly_charge", "BMDA hourly charge", "#cde2fb"),
-        ("boro_irrigation_cost_per_ha_2016_17", "Boro irrigation cost per ha (2016-17)", "#ececea"),
+        ("bmda_dtw_hourly_charge", "#cde2fb"),
+        ("boro_irrigation_cost_per_ha_2016_17", "#ececea"),
     ]
-    for key, lab, colr in bands[::-1]:
+    for key, colr in bands[::-1]:
         lo, hi = chg[f"{key}_Tk_per_m3_low"], chg[f"{key}_Tk_per_m3_high"]
-        ax2.axhspan(lo, hi, color=colr, lw=0, zorder=0)
-    ax2.text(
-        len(wv) - 0.4,
-        chg["boro_irrigation_cost_per_ha_2016_17_Tk_per_m3_high"] * 0.93,
-        f"surveyed irrigation cost per ha ÷ Boro requirement\n(2016–17): at most Tk {chg['boro_irrigation_cost_per_ha_2016_17_Tk_per_m3_low']:.2f}–{chg['boro_irrigation_cost_per_ha_2016_17_Tk_per_m3_high']:.2f} m⁻³",
-        ha="right",
-        va="top",
-        fontsize=5.9,
-        color=MUTED,
-    )
-    ax2.text(
-        -0.4,
-        chg["bmda_dtw_hourly_charge_Tk_per_m3_low"] * 0.93,
-        f"BMDA hourly charge ÷ well discharge: Tk {chg['bmda_dtw_hourly_charge_Tk_per_m3_low']:.2f}–{chg['bmda_dtw_hourly_charge_Tk_per_m3_high']:.2f} m⁻³",
-        ha="left",
-        va="top",
-        fontsize=5.9,
-        color=BLUES[5],
-    )
-    ax2.plot(x, wv.water_value_per_1000_m3, "o", ms=4.3, color=BLUES[5], mec="white", mew=0.5, zorder=3)
-    ax2.axhline(chg.water_value_Tk_per_m3_median, color=BLUES[5], lw=0.7, ls=(0, (3, 2)))
-    ax2.text(
-        -0.4,
-        chg.water_value_Tk_per_m3_median * 1.12,
-        f"median model value Tk {chg.water_value_Tk_per_m3_median:.1f}",
-        fontsize=6.1,
-        color=BLUES[5],
-        va="bottom",
-    )
-    ax2.set_yscale("log")
-    ax2.set_ylim(0.3, 150)
-    ax2.set_yticks([0.5, 1, 2, 5, 10, 20, 50, 100])
-    ax2.set_yticklabels(["0.5", "1", "2", "5", "10", "20", "50", "100"])
-    ax2.set_xticks(x)
-    ax2.set_xticklabels(wv.district, rotation=60, ha="right", fontsize=6)
-    ax2.set_xlim(-0.6, len(wv) - 0.4)
-    ax2.set_ylabel("Tk per m³ (log scale)")
-    ax2.yaxis.grid(True, which="major")
+        ax2.axvspan(lo, hi, color=colr, lw=0, zorder=0)
+    bl, bh = chg["bmda_dtw_hourly_charge_Tk_per_m3_low"], chg["bmda_dtw_hourly_charge_Tk_per_m3_high"]
+    cl, ch = chg["boro_irrigation_cost_per_ha_2016_17_Tk_per_m3_low"], chg["boro_irrigation_cost_per_ha_2016_17_Tk_per_m3_high"]
+    ax2.text(np.sqrt(bl * bh), len(wv) - 0.2, f"pumping\ncharge\nTk {bl:.2f}–\n{bh:.2f}", ha="center", va="top",
+             fontsize=MIN_PT, color=BLUES[5])
+    ax2.text(np.sqrt(1.15 * ch), len(wv) - 0.2, f"surveyed\nirrigation\ncost, at most\nTk {cl:.2f}–{ch:.2f}",
+             ha="center", va="top", fontsize=MIN_PT, color=MUTED)
+    ax2.hlines(y, bh, wv.water_value_per_1000_m3, color=LIGHT, lw=0.8, zorder=1)
+    ax2.plot(wv.water_value_per_1000_m3, y, "o", ms=4.3, color=BLUES[5], mec="white", mew=0.5, zorder=3)
+    for yy_, v in zip(y, wv.water_value_per_1000_m3):
+        ax2.text(v * 1.12, yy_, f"{v:.0f}", va="center", ha="left", fontsize=MIN_PT, color=INK)
+    med = chg.water_value_Tk_per_m3_median
+    ax2.axvline(med, color=BLUES[5], lw=0.7, ls=(0, (3, 2)), zorder=1)
+    ax2.text(med * 0.94, -0.95, f"median Tk {med:.1f}", ha="right", va="center", fontsize=MIN_PT, color=BLUES[5])
+    ax2.set_xscale("log")
+    ax2.set_xlim(0.4, 160)
+    ax2.set_xticks([0.5, 1, 2, 5, 10, 20, 50, 100])
+    ax2.set_xticklabels(["0.5", "1", "2", "5", "10", "20", "50", "100"])
+    ax2.set_yticks(y)
+    ax2.set_yticklabels(wv.district, fontsize=MIN_PT)
+    ax2.set_ylim(-1.5, len(wv) - 0.2 + 2.6)
+    ax2.tick_params(axis="y", length=0)
+    ax2.set_xlabel("Tk per m³ (log scale)")
+    ax2.xaxis.grid(True, which="major")
     ax2.set_axisbelow(True)
-    panel(ax2, "b", "Net-return value of water vs what farmers pay")
+    panel(ax2, "b", "Value of water in the model vs what farmers pay")
     save(fig, "Fig6_awd_water_value")
 
 
@@ -1296,7 +1326,7 @@ def fig7():
     ax.yaxis.grid(True)
     ax.set_axisbelow(True)
     ax.legend(loc="upper right", fontsize=6.3, handlelength=1.8)
-    panel(ax, "a", "Fallow needed as low-water crops expand, budget 0.80")
+    panel(ax, "a", "Fallow falls only far beyond 2015–2025 areas")
     g = lw8[lw8.awd == "none"].sort_values("low_water_crop_limit_x_baseline")
     left = np.zeros(len(g))
     for c in C6 + ["Fallow"]:
@@ -1307,10 +1337,10 @@ def fig7():
             v - 0.35,
             left=left + 0.175,
             height=0.66,
-            color="#ffffff" if fallow else COL6[c],
-            edgecolor="#8a8984" if fallow else "white",
+            color="#d9d7d0" if fallow else COL6[c],  # same fallow colour as Fig. 4
+            edgecolor="white",
             hatch="" if fallow else HATCH6[c],
-            lw=0.5 if fallow else 0,
+            lw=0,
             label="Fallow" if fallow else CROP_LABEL.get(c, c),
         )
         for xi, (l, vi) in enumerate(zip(left, v)):
@@ -1342,7 +1372,7 @@ def fig7():
         columnspacing=0.8,
         handletextpad=0.35,
     )
-    panel(ax2, "b", "Least-fallow plan, conventional irrigation")
+    panel(ax2, "b", "Mustard takes the released land (least-fallow plan)")
     save(fig, "Fig7_low_water_crops")
 
     print("FIGURES COMPLETE", len(list(O.glob("*.png"))))
@@ -1849,10 +1879,10 @@ def figs5():
     for key, lab in [("price_low", "low"), ("price_mid", "mid"), ("price_high", "high")]:
         p = float(econ[("Potato", key)])
         ax.axvline(p, color=MUTED, lw=0.6, ls=(0, (2, 2)))
-        ax.text(p + 0.3, 90, lab, ha="left", va="center", fontsize=6.3, color=MUTED)
+        ax.text(p + 0.3, 62, lab, ha="left", va="center", fontsize=MIN_PT, color=MUTED)
     ax.set_xlim(6, 39.5)
     ax.set_xticks([6, 10, 14, 18, 22, 26, 30, 34])
-    ax.set_ylim(0, 95)
+    ax.set_ylim(0, 65)
     ax.yaxis.grid(True)
     ax.set_axisbelow(True)
     ax.spines["bottom"].set_bounds(6, 34)

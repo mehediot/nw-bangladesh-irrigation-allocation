@@ -1,5 +1,12 @@
 # Change log
 
+## 1.1.2 (November 2026)
+
+Presentation changes only; all 91 output tables are unchanged in content.
+
+- Figs 1-7 and S5 redrawn: finding-style panel titles; one fallow colour across Figs 4 and 7; direct labels in place of some legends.
+- Fig. 1: tighter colour ranges for (a) and the scarcity index; (e) on a purple scale. Fig. 2: O4 text clarified. Fig. 3(b): cells with no cut shown in grey. Fig. 4: plan names, a marker for budget 0.80, direct labels in (d). Fig. 5: temporal and spatial sets in orange and navy, budget-cut axis on (b). Fig. 6(b): districts as a sorted dot plot against the farmer-cost bands. Fig. S5(a): y-axis 0-65%.
+
 ## 1.1.1 (November 2026)
 
 - Fig. 8 redrawn: inputs grouped by kind (water, land and policy; yields; prices and costs; management option), one range per input and outcome, single alternatives as dots and "no change" as grey dots, value labels on each range. Same data (ext_28_sensitivity_tornado.csv); no table changes.
