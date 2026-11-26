@@ -355,7 +355,7 @@ def fig2():
 
     FILL, GROUP = "#ececec", "#f7f7f7"
     DASH = (0, (4, 2.5))
-    fig = plt.figure(figsize=(W, 8.6))
+    fig = plt.figure(figsize=(W, 7.0))  # leaves room for text on the same journal page
     ax = fig.add_axes([0, 0, 1, 1])
     ax.set_xlim(0, 100)
     ax.set_ylim(0, 115)
@@ -417,7 +417,7 @@ def fig2():
     # allocation
     arrow(26, 56, 26, 49.5)
     group(24, 20.5, 52, 29, "Nominal and robust allocation (per district)")
-    box(27, 41.5, 46, 4.6, "Linear programming (HiGHS via SciPy)", tsize=7.6)
+    box(27, 41.2, 46, 4.2, "Linear programming (HiGHS via SciPy)", tsize=7.6)
     box(27, 32.5, 46, 8, "Constraints", "Land balance with explicit fallow, water budget,\nBoro floor, crop limits")
     box(
         27, 22.5, 46, 9, "Objectives and robustness",

@@ -47,6 +47,6 @@
   "scripts/05_decision_value.py": "5d1d508c6892f710fe5e6dfb6002e9f086284a41e6da7fe8b2cae45a4ec9690e",
   "scripts/06_allocation_scenarios.py": "12e60c7065f465a2080a8df597e6eb4eb14b42577e2d1496a0d6a6d05c67ecd5",
   "scripts/07_tables.py": "0a30a12db21a605317dc14cced4c0fdb5b4576bbccc17624cce49f922a3a5963",
-  "scripts/08_figures.py": "e70e4e9133eefe99022445398841b80efb2d6d73eb9c3828186cc5a245a8981a",
+  "scripts/08_figures.py": "5f98f2d3519adf7ebf4b7a40332de8f00a8dd977a32d30493398c826bdafbc05",
   "scripts/run_all.py": "aa83f666f1b5e12f81bef2cff89fbd508bc41ba885b3962917441778e5e7c448"
 }
