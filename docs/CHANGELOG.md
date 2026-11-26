@@ -4,8 +4,9 @@
 
 Presentation changes only; all 91 output tables are unchanged in content.
 
+- Fig. 2 redrawn as a methods flowchart in the layout of the thesis proposal, updated to the analysis done (four crops; food energy and net return; SHAP only; decision-time design; AWD and lentil/mustard scenarios).
 - Figs 1-7 and S5 redrawn: finding-style panel titles; one fallow colour across Figs 4 and 7; direct labels in place of some legends.
-- Fig. 1: tighter colour ranges for (a) and the scarcity index; (e) on a purple scale. Fig. 2: O4 text clarified. Fig. 3: budget lines stop below their labels and the legend sits clear of them; (b) cells with no cut shown in grey. Fig. 4: plan names, a marker for budget 0.80, direct labels in (d). Fig. 5: temporal and spatial sets in orange and navy, budget-cut axis on (b). Fig. 6(b): districts as a sorted dot plot against the farmer-cost bands, stems starting at the upper end of the surveyed cost so that band labels stay clear. Fig. 2: O4 axis label shortened. Fig. S5(a): y-axis 0-65%.
+- Fig. 1: tighter colour ranges for (a) and the scarcity index; (e) on a purple scale. Fig. 3: budget lines stop below their labels and the legend sits clear of them; (b) cells with no cut shown in grey. Fig. 4: plan names, a marker for budget 0.80, direct labels in (d). Fig. 5: temporal and spatial sets in orange and navy, budget-cut axis on (b). Fig. 6(b): districts as a sorted dot plot against the farmer-cost bands, stems starting at the upper end of the surveyed cost so that band labels stay clear. Fig. S5(a): y-axis 0-65%.
 
 ## 1.1.1 (November 2026)
 

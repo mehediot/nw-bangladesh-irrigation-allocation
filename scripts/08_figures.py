@@ -350,510 +350,99 @@ def fig1():
 
 
 def fig2():
-    """Fig. 2 - framework."""
-    t3m = pd.read_csv(T / "TableS4_rawsi.csv").set_index("district")
-    # Drawn in millimetres (1 unit = 1 mm at 190 mm width). The small charts inside the boxes are
-    # drawn from the pipeline's own outputs, so the diagram cannot drift away from the results.
-    from matplotlib.patches import Circle, PathPatch, Polygon, Rectangle
-    from matplotlib.path import Path as MPath
+    """Fig. 2 - methods flowchart, in the layout of the thesis proposal, updated to the analysis done."""
+    from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
 
-    NAVY, BAND, CARD_EC, VIOLET = "#104281", "#f4f3ef", "#c9c8c2", MODEL_COL["Elastic Net"]
-    ROWS = [
-        ("1", "Data", 27),
-        ("2", "Study\ndesign", 30),
-        ("3", "Models", 39),
-        ("4", "Optimisation", 40),
-        ("5", "Decision\nsupport", 25),
-    ]
-    GAP = 5.5
-    FH = sum(h for *_, h in ROWS) + GAP * (len(ROWS) - 1) + 1
-    fig = plt.figure(figsize=(W, W * FH / 190))
+    FILL, GROUP = "#ececec", "#f7f7f7"
+    DASH = (0, (4, 2.5))
+    fig = plt.figure(figsize=(W, 8.6))
     ax = fig.add_axes([0, 0, 1, 1])
-    ax.set_xlim(0, 190)
-    ax.set_ylim(0, FH)
+    ax.set_xlim(0, 100)
+    ax.set_ylim(0, 115)
     ax.axis("off")
-    ytop, ROWY = FH - 0.5, {}
-    for num, label, h in ROWS:  # stage tabs and bands
-        y0 = ytop - h
-        ROWY[num] = (y0, ytop)
+
+    def box(x, y, w, h, title, sub=None, fill="white", tsize=8.2, ssize=6.8, tdy=None, sy=0.30):
+        ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0,rounding_size=0.6", fc=fill, ec=INK, lw=0.8))
+        if sub:
+            ty = y + h * 0.66 if tdy is None else y + h - tdy
+            ax.text(x + w / 2, ty, title, ha="center", va="center", fontsize=tsize, fontweight="bold")
+            ax.text(x + w / 2, y + h * sy, sub, ha="center", va="center", fontsize=ssize, linespacing=1.15)
+        else:
+            ax.text(x + w / 2, y + h / 2, title, ha="center", va="center", fontsize=tsize, fontweight="bold")
+
+    def group(x, y, w, h, title):
         ax.add_patch(
-            FancyBboxPatch((0.8, y0), 20, h, boxstyle="round,pad=0,rounding_size=1.6", fc=NAVY, ec="none")
+            FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0,rounding_size=1.0", fc=GROUP, ec=INK, lw=0.8, ls=DASH)
         )
-        ax.add_patch(Circle((10.8, ytop - 6), 3.3, fc="white", ec="none"))
-        ax.text(10.8, ytop - 6.15, num, ha="center", va="center", fontsize=9, fontweight="bold", color=NAVY)
-        ax.text(
-            10.8,
-            (y0 + ytop - 9.5) / 2,
-            label,
-            ha="center",
-            va="center",
-            fontsize=7.6,
-            fontweight="bold",
-            color="white",
-            linespacing=1.2,
-        )
+        ax.text(x + w / 2, y + h - 2.2, title, ha="center", va="center", fontsize=8.6, fontweight="bold")
+
+    def arrow(x1, y1, x2, y2, dashed=False):
         ax.add_patch(
-            FancyBboxPatch((23.5, y0), 166, h, boxstyle="round,pad=0,rounding_size=1.6", fc=BAND, ec="none")
-        )
-        ytop = y0 - GAP
-
-    def card(x, y, w, h, title=None, fc="white", ec=CARD_EC):
-        ax.add_patch(
-            FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0,rounding_size=1.1", fc=fc, ec=ec, lw=0.6)
-        )
-        if title:
-            ax.text(x + 2.4, y + h - 2.2, title, ha="left", va="top", fontsize=7.3, fontweight="bold")
-
-    def note(x, y, s, size=6.2, color=MUTED, **kw):
-        ax.text(
-            x,
-            y,
-            s,
-            fontsize=size,
-            color=color,
-            va=kw.pop("va", "top"),
-            ha=kw.pop("ha", "left"),
-            linespacing=kw.pop("linespacing", 1.3),
-            **kw,
-        )
-
-    def flow(p, q, label=None, side="right", lw=1.6):
-        ax.add_patch(
-            FancyArrowPatch(p, q, arrowstyle="-|>", mutation_scale=9, lw=lw, color=NAVY, shrinkA=0, shrinkB=0)
-        )
-        if label:
-            ax.text(
-                p[0] + (1.6 if side == "right" else -1.6),
-                (p[1] + q[1]) / 2,
-                label,
-                ha="left" if side == "right" else "right",
-                va="center",
-                fontsize=6,
-                color=NAVY,
-                style="italic",
-            )
-
-    def thumb(x, y, w, h):
-        a = ax.inset_axes([x, y, w, h], transform=ax.transData)
-        a.set_xticks([])
-        a.set_yticks([])
-        for s in a.spines.values():
-            s.set_visible(True)
-            s.set_color(CARD_EC)
-            s.set_linewidth(0.5)
-        a.set_facecolor("#fbfbf9")
-        return a
-
-    def tile(x, y, s=8.0, fc="#eaf1fb"):
-        ax.add_patch(FancyBboxPatch((x, y), s, s, boxstyle="round,pad=0,rounding_size=1.2", fc=fc, ec="none"))
-
-    def drop(cx, cy, r, color):
-        v = [
-            (cx, cy + 1.9 * r),
-            (cx + 0.35 * r, cy + 1.2 * r),
-            (cx + r, cy + 0.55 * r),
-            (cx + r, cy),
-            (cx + r, cy - 0.55 * r),
-            (cx + 0.55 * r, cy - r),
-            (cx, cy - r),
-            (cx - 0.55 * r, cy - r),
-            (cx - r, cy - 0.55 * r),
-            (cx - r, cy),
-            (cx - r, cy + 0.55 * r),
-            (cx - 0.35 * r, cy + 1.2 * r),
-            (cx, cy + 1.9 * r),
-        ]
-        ax.add_patch(PathPatch(MPath(v, [MPath.MOVETO] + [MPath.CURVE4] * 12), fc=color, ec="none"))
-
-    # ---- row 1: data ------------------------------------------------------------------------------
-    y0, y1 = ROWY["1"]
-    cw = 38.6
-    DATA = [
-        (
-            "Crop statistics",
-            "BBS: area, yield, production;\n16 districts, four crops,\n2015–2025; Boro as husked rice",
-        ),
-        (
-            "Climate",
-            "NASA POWER: rain, temperature,\nhumidity; FAO-56 crop water need\n11 distinct series for 16 districts",
-        ),
-        (
-            "Groundwater trend",
-            "Published records of the\nlong-term change in\ngroundwater level, by district",
-        ),
-        (
-            "Crop water and value",
-            "Net irrigation requirement (NIR)\nFood energy per kg\nPrices and production costs",
-        ),
-    ]
-    for k, (head, body) in enumerate(DATA):
-        x = 26 + k * (cw + 2.4)
-        card(x, y0 + 2, cw, y1 - y0 - 4)
-        tx, ty = x + 2.4, y1 - 12.8
-        tile(tx, ty)
-        ax.text(tx + 9.6, ty + 4.0, head, ha="left", va="center", fontsize=7.0, fontweight="bold")
-        note(x + 2.4, ty - 1.6, body, size=5.9)
-        if k == 0:
-            for i, (c, hh) in enumerate(zip(CROPS, (5.6, 3.2, 4.4))):
-                ax.add_patch(Rectangle((tx + 1.5 + i * 1.9, ty + 1.4), 1.5, hh, fc=CROP_COL[c], ec="none"))
-        if k == 1:
-            cx, cy = tx + 4.2, ty + 4.3
-            ax.add_patch(Circle((cx, cy), 1.75, fc=MODEL_COL["Persistence"], ec="none"))
-            for t in np.arange(8) * np.pi / 4:
-                ax.plot(
-                    [cx + 2.4 * np.cos(t), cx + 3.3 * np.cos(t)],
-                    [cy + 2.4 * np.sin(t), cy + 3.3 * np.sin(t)],
-                    color=MODEL_COL["Persistence"],
-                    lw=1,
-                    solid_capstyle="round",
-                )
-        if k == 2:
-            ax.plot(
-                [tx + 1.2, tx + 7.2], [ty + 6.6, ty + 6.6], color="#8a5a2b", lw=1.4, solid_capstyle="round"
-            )
-            ax.plot(
-                [tx + 1.4, tx + 3.2, tx + 4.8, tx + 6.3],
-                [ty + 5.2, ty + 4.5, ty + 3.2, ty + 2.0],
-                color=CROP_COL["Boro Rice"],
-                lw=1.3,
-                ls=(0, (2.2, 1.2)),
-            )
-            ax.add_patch(
-                Polygon(
-                    [(tx + 6.3, ty + 1.2), (tx + 5.5, ty + 2.5), (tx + 7.1, ty + 2.5)],
-                    fc=CROP_COL["Boro Rice"],
-                    ec="none",
-                )
-            )
-        if k == 3:
-            drop(tx + 2.9, ty + 3.5, 1.55, CROP_COL["Boro Rice"])
-            ax.add_patch(Circle((tx + 6.0, ty + 3.4), 1.7, fc=MODEL_COL["Persistence"], ec="none"))
-            ax.text(
-                tx + 6.0,
-                ty + 3.3,
-                "Tk",
-                ha="center",
-                va="center",
-                fontsize=4.6,
-                fontweight="bold",
-                color="white",
-            )
-
-    # ---- row 2: study design ----------------------------------------------------------------------
-    y0, y1 = ROWY["2"]
-    card(26, y0 + 2, 98, y1 - y0 - 4, "Decision-time forecasting: only what is known when the plan is made")
-    YEARS = list(range(2015, 2026))
-    sq, x_t, y_t = 5.5, 47.5, y1 - 10.5
-    for i, yr in enumerate(YEARS):
-        ax.text(
-            x_t + i * sq + sq / 2 - 0.3,
-            y_t + 0.9,
-            f"'{yr % 100}",
-            ha="center",
-            va="bottom",
-            fontsize=5.6,
-            color=MUTED,
-        )
-    for r, target in enumerate((2023, 2024, 2025)):
-        yy = y_t - (r + 1) * 4.0
-        ax.text(x_t - 1.8, yy + 1.6, f"Forecast for {target}", ha="right", va="center", fontsize=6)
-        for i, yr in enumerate(YEARS):
-            if yr > target:
-                continue
-            kw = (
-                dict(fc="#d5d0f7", ec="white")
-                if yr <= target - 2
-                else (
-                    dict(fc=VIOLET, ec="white")
-                    if yr == target
-                    else dict(fc="white", ec=CARD_EC, hatch="/////")
-                )
-            )
-            ax.add_patch(Rectangle((x_t + i * sq, yy), sq - 0.6, 3.2, lw=0.5, **kw))
-    ly = y0 + 4.5
-    for lx, kw, lab in [
-        (29, dict(fc="#d5d0f7", ec="white"), "yields known when planning (to t − 2)"),
-        (72, dict(fc="white", ec=CARD_EC, hatch="/////"), "not yet published (t − 1)"),
-        (101, dict(fc=VIOLET, ec="white"), "target season t"),
-    ]:
-        ax.add_patch(Rectangle((lx, ly - 1.3), 3.6, 2.6, lw=0.5, **kw))
-        ax.text(lx + 4.6, ly, lab, ha="left", va="center", fontsize=5.9, color=MUTED)
-    card(130, y0 + 2, 57.5, y1 - y0 - 4, "Water accounting")
-    note(
-        132.4,
-        y1 - 8.2,
-        "Water demand = 10 × NIR × area  (m³)\nModelled irrigation budget = ρ × baseline demand",
-        size=6.0,
-        color=INK,
-        linespacing=1.5,
-    )
-    for i, (lab, frac, colr) in enumerate(
-        [("baseline demand", 1.0, BLUES[1]), ("budget, ρ = 0.80", 0.8, BLUES[4])]
-    ):
-        yy = y0 + 10.6 - i * 4.6
-        ax.text(132.4, yy + 1.4, lab, ha="left", va="center", fontsize=5.8, color=MUTED)
-        ax.add_patch(Rectangle((153.5, yy), 31, 2.8, fc="none", ec=CARD_EC, lw=0.5, ls=(0, (2, 1.5))))
-        ax.add_patch(Rectangle((153.5, yy), 31 * frac, 2.8, fc=colr, ec="none"))
-
-    # ---- row 3: models ----------------------------------------------------------------------------
-    y0, y1 = ROWY["3"]
-    ch = y1 - y0 - 4
-    card(26, y0 + 2, 98, ch, "O1  Yield forecasting and explanation")
-    note(28.4, y1 - 8.4, "Forecasts used by the optimiser", size=6.3, color=INK, fontweight="bold")
-    for i, (m, mk, desc) in enumerate(
-        [
-            ("Elastic Net", "o", "lagged yields, trend"),
-            ("Persistence", "D", "yield of season t − 2"),
-            ("Climatology", "s", "district mean yield"),
-        ]
-    ):
-        yy = y1 - 14.6 - i * 6.3
-        ax.plot(30.2, yy, mk, ms=5, color=MODEL_COL[m], mec="white", mew=0.4)
-        ax.text(32.8, yy + 0.1, m, ha="left", va="center", fontsize=6.4)
-        note(32.8, yy - 1.5, desc, size=5.7)
-    note(28.4, y0 + 4.9, "Also a district trend.  Test seasons 2023–2025", size=5.8)
-    fcst = pd.read_csv(F / "decision_time_forecasts.csv")
-    g = fcst[fcst.crop == "Boro Rice"]
-    a = thumb(63.5, y0 + 7.6, 17, 17)
-    lo, hi = g.yield_t_ha.min() - 0.12, g.yield_t_ha.max() + 0.12
-    a.plot([lo, hi], [lo, hi], color=MUTED, lw=0.5, ls=(0, (3, 2)))
-    a.plot(g.yield_t_ha, g.EN_cutoff2, "o", ms=1.9, color=VIOLET, mec="none")
-    a.set_xlim(lo, hi)
-    a.set_ylim(lo, hi)
-    note(72, y0 + 7.35, "observed", size=5.5, ha="center")
-    ax.text(62.4, y0 + 16.1, "forecast", rotation=90, ha="center", va="center", fontsize=5.5, color=MUTED)
-    ax.plot([82.6, 82.6], [y0 + 4.2, y1 - 7.4], color=CARD_EC, lw=0.6, ls=(0, (2, 2)))
-    note(84.6, y1 - 8.4, "Explanation", size=6.3, color=INK, fontweight="bold")
-    note(84.6, y1 - 12.2, "Elastic Net: exact additive\ncontributions of its inputs", size=5.8)
-    shp = pd.read_csv(R / "04_gbt_shap_values.csv")
-    s = shp[shp.crop == "Boro Rice"]
-    cols = [
-        "year_trend",
-        "district_aggregate",
-        "hybrid_area_share",
-        "terminal_tmax_c",
-        "season_tmin_c",
-        "season_rain_mm",
-        "monsoon_prev_rain_mm",
-        "season_rh_pct",
-    ]
-    a = thumb(106.5, y0 + 4.4, 15.5, 14.4)
-    rng2 = np.random.default_rng(1)
-    for i, c in enumerate(cols):
-        a.scatter(
-            s[c],
-            len(cols) - 1 - i + rng2.uniform(-0.25, 0.25, len(s)),
-            s=1.3,
-            color=VIOLET if i != 1 else "#8a8984",
-            lw=0,
-        )
-    a.axvline(0, color=MUTED, lw=0.4)
-    a.set_ylim(-0.7, len(cols) - 0.3)
-    note(84.6, y0 + 13.6, "Hindcast boosting\nwith same-season\nclimate: SHAP,\ndescriptive only", size=5.6)
-
-    card(130, y0 + 2, 57.5, ch, "O2  Relative scarcity index (RAWSI)")
-    for i, lab in enumerate(["Groundwater trend", "Crop-mix water demand", "Climate deficit"]):
-        yy = y1 - 13.2 - i * 5.3
-        ax.add_patch(
-            FancyBboxPatch(
-                (132.4, yy - 1.9), 27.4, 3.8, boxstyle="round,pad=0,rounding_size=.9", fc="#fdebe0", ec="none"
+            FancyArrowPatch(
+                (x1, y1), (x2, y2), arrowstyle="-|>", mutation_scale=8, lw=0.8, color=INK,
+                ls=DASH if dashed else "-", shrinkA=0, shrinkB=0,
             )
         )
-        ax.text(146.1, yy, lab, ha="center", va="center", fontsize=5.8)
-    note(146.1, y0 + 11.0, "scaled 0–1, averaged", size=5.8, ha="center")
-    note(146.1, y0 + 7.6, "20 alternative constructions", size=5.8, ha="center")
-    ax.plot([160.2, 160.2], [y1 - 13.2, y1 - 23.8], color=NAVY, lw=0.8, solid_capstyle="butt")
-    for k_ in range(3):
-        ax.plot([159.8, 160.2], [y1 - 13.2 - k_ * 5.3] * 2, color=NAVY, lw=0.8)
-    ax.add_patch(
-        FancyArrowPatch(
-            (160.2, y1 - 18.5),
-            (164, y1 - 18.5),
-            arrowstyle="-|>",
-            mutation_scale=6,
-            lw=0.9,
-            color=NAVY,
-            shrinkA=0,
-            shrinkB=0,
-        )
-    )
-    a = ax.inset_axes([164.6, y0 + 3.4, 22.2, 28.2], transform=ax.transData)
-    a.axis("off")
-    nrm = Normalize(0.15, 0.85)
-    for name in sorted(study):  # fixed order: a set's order changes between runs and moved edge pixels
-        a.add_collection(
-            PolyCollection(
-                shapes[name], facecolors=ORANGES(nrm(t3m.RAWSI[name])), edgecolors="white", linewidths=0.25
-            )
-        )
-    a.set_xlim(X0, X1)
-    a.set_ylim(Y0, Y1)
-    a.set_aspect(1 / np.cos(np.radians(25.0)))
 
-    # ---- row 4: optimisation ----------------------------------------------------------------------
-    y0, y1 = ROWY["4"]
-    ch = y1 - y0 - 4
-    card(26, y0 + 2, 98, ch, "O3  District crop-allocation LP  (16 districts)")
-    FORM = [
-        ("maximise", r"$\Sigma_c\ g_c\,x_c$"),
-        ("land", r"$\Sigma_c\ x_c + u = A$"),
-        ("water", r"$10\,\Sigma_c\ n_c\,x_c \leq \rho\,W_0$"),
-        ("Boro floor", r"$x_{\mathrm{Boro}} \geq \phi\,a_{\mathrm{Boro}}$"),
-        ("limits", r"$0 \leq x_c \leq U_c$"),
-    ]
-    for i, (lab, eq) in enumerate(FORM):
-        yy = y1 - 10.4 - i * 4.55
-        ax.text(
-            28.4,
-            yy,
-            lab,
-            ha="left",
-            va="center",
-            fontsize=6,
-            color=MUTED,
-            fontweight="bold" if i == 0 else "normal",
-        )
-        ax.text(41.5, yy, eq, ha="left", va="center", fontsize=6.6)
-    note(28.4, y0 + 5.9, "x = crop area, u = fallow;  duals give shadow prices", size=5.7)
-    note(66.5, y1 - 8.4, "Two objectives  (gain g per hectare)", size=6.3, color=INK, fontweight="bold")
-    for i, (lab, eq) in enumerate(
-        [
-            ("Food energy", "yield × kcal/kg"),
-            ("Net return", "revenue − cost"),
-            ("Fallow plan", "free or minimal"),
-        ]
-    ):
-        yy = y1 - 14.2 - i * 5.0
-        ax.add_patch(
-            FancyBboxPatch(
-                (66.5, yy - 1.9), 17.6, 3.8, boxstyle="round,pad=0,rounding_size=.9", fc="#e2f4ec", ec="none"
-            )
-        )
-        ax.text(75.3, yy, lab, ha="center", va="center", fontsize=5.8)
-        note(85.4, yy, eq, size=5.8, va="center")
-    rs2 = pd.read_csv(X / "ext_16_budget_response.csv")
-    g = rs2[(rs2.plan == "least") & (rs2.objective == "food_energy")]
-    a = thumb(108, y0 + 14.2, 14, 15.6)
-    a.plot(
-        g.budget_ratio, g.fallow_pct_of_land, "-o", color=CROP_COL["Boro Rice"], lw=0.9, ms=1.8, mec="none"
-    )
-    a.margins(0.16)
-    note(115, y0 + 13.6, "budget", size=5.5, ha="center")
-    ax.text(106.9, y0 + 22, "fallow %", rotation=90, ha="center", va="center", fontsize=5.5, color=MUTED)
-    note(
-        66.5,
-        y0 + 12.6,
-        "Budget ratio and Boro floor are varied;\nthe curve shows the fallow a cut needs",
-        size=5.8,
-    )
+    def line(xs, ys, dashed=False):
+        ax.plot(xs, ys, color=INK, lw=0.8, ls=DASH if dashed else "-")
 
-    card(130, y0 + 2, 53.5, ch, "O4  Γ-robust planning  (48 district-years)")
-    note(
-        132.4,
-        y1 - 8.6,
-        "Crop water need is uncertain: up to Γ of\nthe four crops need their upper NIR",
-        size=5.9,
-        color=INK,
+    # data
+    box(2, 103, 28, 10, "BBS Yearbooks", "Area, production, yield\n16 districts, 2015\u20132025")
+    box(36, 104.5, 28, 7, "Panel preparation and audit", fill=FILL, tsize=8.4)
+    box(70, 103, 28, 10, "Other inputs", "NASA POWER weather; groundwater\ntrends; published NIR, prices, costs")
+    arrow(30, 108, 36, 108)
+    arrow(70, 108, 64, 108)
+    # decision-time design and water account
+    arrow(50, 104.5, 50, 99.5)
+    box(
+        18, 90, 64, 9.5, "Decision-time design and water account",
+        "Forecasts use only data up to season t \u2212 2; test seasons 2023\u20132025\n"
+        "Budget = \u03c1 \u00d7 baseline demand (\u03c1 = 0.70\u20131.00); FAO-56 check of the NIR",
+        fill=FILL,
     )
-    note(
-        132.4,
-        y1 - 15.8,
-        "Finds the smallest budget\nat which a plan fits every\nsuch case and still holds\na set share of food energy",
-        size=5.8,
+    line([50, 50], [90, 87])
+    line([26, 74], [87, 87])
+    arrow(26, 87, 26, 84.5)
+    arrow(74, 87, 74, 84.5)
+    # forecasting and scarcity
+    group(4, 56, 44, 28.5, "Yield forecasting")
+    box(7, 70.5, 38, 9, "Models", "Elastic Net; persistence, climatology, district\ntrend; GBT hindcast (descriptive only)")
+    box(7, 62.5, 38, 7, "Explainability", "Exact SHAP decomposition of each forecast", tdy=2.3)
+    box(7, 57.5, 38, 4.2, "Validation: chronological, rolling-origin", tsize=7.2)
+    group(52, 56, 44, 28.5, "Water scarcity (descriptive)")
+    box(55, 70.5, 38, 9, "Indicators", "Groundwater trend, irrigation demand,\nFAO-56 climate deficit")
+    box(55, 62.5, 38, 7, "RAWSI (0\u20131, relative)", "Mean of the three scaled indicators", tdy=2.3)
+    box(55, 57.5, 38, 4.2, "Robustness: 20 alternative constructions", tsize=7.2)
+    # allocation
+    arrow(26, 56, 26, 49.5)
+    group(24, 20.5, 52, 29, "Nominal and robust allocation (per district)")
+    box(27, 41.5, 46, 4.6, "Linear programming (HiGHS via SciPy)", tsize=7.6)
+    box(27, 32.5, 46, 8, "Constraints", "Land balance with explicit fallow, water budget,\nBoro floor, crop limits")
+    box(
+        27, 22.5, 46, 9, "Objectives and robustness",
+        "Food energy or net return; least-fallow plan\n\u0393-robust water budget (\u0393 = 0\u20134 crops at high NIR)",
     )
-    note(132.4, y0 + 8.4, "Result: the budget that holds\n80% or 90% of food energy", size=5.8)
-    t6f = pd.read_csv(T / "Fig5_robust_budgets.csv")
-    t6f = t6f[t6f.uncertainty_set.isin(["nominal", "spatial_upper"])]
-    a = thumb(168.2, y0 + 12.4, 13.4, 13.6)
-    for k, tg in enumerate((80, 90)):
-        a.plot(
-            range(5),
-            t6f[f"budget_needed_to_hold_{tg}pct_median"],
-            "-o",
-            color=[BLUES[3], BLUES[6]][k],
-            lw=0.9,
-            ms=1.8,
-            mec="none",
-        )
-    a.set_xlim(-0.35, 4.35)
-    note(174.9, y0 + 11.8, "Γ = 0 … 4", size=5.5, ha="center")
-    ax.text(
-        166.9, y0 + 18.4, "budget", rotation=90, ha="center", va="center", fontsize=6, color=MUTED
+    box(
+        2, 27, 19, 16, "Scenarios",
+        "Budget ratio \u03c1\nBoro floor \u03c6\nCrop limits\nAWD adoption\nLentil and mustard",
+        fill=FILL, tdy=2.4, sy=0.46,
     )
-
-    # ---- row 5: decision support ------------------------------------------------------------------
-    y0, y1 = ROWY["5"]
-    tw = 30.3
-    OUT = [
-        ("Feasibility", "Which districts can keep\ntheir Boro area at\neach budget"),
-        ("Trade-offs", "Food energy, net\nreturn and fallow under\nthe same budget"),
-        ("Shadow prices", "Value of extra water;\ncost of holding\nthe Boro floor"),
-        ("Forecast value", "Whether a better yield\nforecast changes\nthe plan"),
-        ("Budget needed", "Budget that holds food\nenergy when crop water\nneed is uncertain"),
-    ]
-    for k, (head, body) in enumerate(OUT):
-        x = 26 + k * (tw + 2.5)
-        card(x, y0 + 7.2, tw, y1 - y0 - 9.2, fc="#fdf3df", ec="#ecd9ac")
-        ax.text(x + tw / 2, y1 - 4.3, head, ha="center", va="top", fontsize=7, fontweight="bold")
-        note(x + tw / 2, y1 - 8.0, body, size=5.8, ha="center")
-    ax.text(
-        106.75,
-        y0 + 3.6,
-        "Checks:  FAO-56 requirement in place of published NIR   ·   validation that leaves out whole climate cells   ·   five yield sources   ·   potato price Tk 6–34 per kg",
-        ha="center",
-        va="center",
-        fontsize=5.7,
-        color=MUTED,
-        style="italic",
+    arrow(21, 35, 24, 35)
+    # the scarcity index informs the reading of results; it does not enter the model
+    line([90, 90], [56, 12.5], dashed=True)
+    arrow(90, 12.5, 76, 12.5, dashed=True)
+    ax.text(88.8, 34, "Diagnostic\ncontext", ha="right", va="center", fontsize=7, style="italic")
+    # evaluation
+    arrow(50, 20.5, 50, 16.5)
+    box(
+        24, 8.5, 52, 8, "Evaluation and analysis",
+        "Feasibility and fallow, trade-offs, decision value of forecasts, budget\n"
+        "needed under uncertain NIR, value of water (dual values), sensitivity, checks",
+        fill=FILL,
     )
-
-    # ---- flows between the stages ----------------------------------------------------------------
-    for x in (45.3, 86.3, 127.3, 168.3):
-        flow((x, ROWY["1"][0] - 0.4), (x, ROWY["2"][1] + 0.4))
-    flow((76.5, ROWY["2"][0] - 0.4), (76.5, ROWY["3"][1] + 0.4))
-    flow((158.7, ROWY["2"][0] - 0.4), (158.7, ROWY["3"][1] + 0.4))
-    flow((60, ROWY["3"][0] - 0.4), (60, ROWY["4"][1] + 0.4), "yield forecasts")
-    flow(
-        (127, ROWY["2"][0] - 0.4), (127, ROWY["4"][1] + 0.4)
-    )  # the budget goes straight to the optimisation stage
-    ax.text(
-        127,
-        (ROWY["3"][0] + ROWY["3"][1]) / 2,
-        "modelled irrigation budget",
-        rotation=90,
-        ha="center",
-        va="center",
-        fontsize=6,
-        color=NAVY,
-        style="italic",
-        bbox=dict(fc=BAND, ec="none", pad=1.0),
-    )
-    flow((72.5, ROWY["4"][0] - 0.4), (72.5, ROWY["5"][1] + 0.4), "plans, shadow prices")
-    flow((155.5, ROWY["4"][0] - 0.4), (155.5, ROWY["5"][1] + 0.4), "robust budgets")
-    ax.add_patch(
-        FancyArrowPatch(
-            (186.6, ROWY["3"][0] + 2),
-            (186.6, ROWY["5"][1] + 0.4),
-            arrowstyle="-|>",
-            mutation_scale=9,
-            lw=1.6,
-            color=NAVY,
-            shrinkA=0,
-            shrinkB=0,
-        )
-    )
-    ax.text(
-        186.6,
-        (ROWY["4"][0] + ROWY["4"][1]) / 2,
-        "district scarcity ranking",
-        rotation=90,
-        ha="center",
-        va="center",
-        fontsize=6,
-        color=NAVY,
-        style="italic",
-        bbox=dict(fc=BAND, ec="none", pad=1.2),
-    )
+    arrow(50, 8.5, 50, 6)
+    box(28, 0.8, 44, 5.2, "Findings and recommendations", tsize=8.4)
     save(fig, "Fig2_framework")
 
 
